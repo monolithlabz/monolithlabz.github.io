@@ -1,74 +1,109 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
     
-    <title>AI First Corporations Observatory — Global Enterprise Index & Technical Registry</title>
+    <title>AI First Corporations Observatory — Monolith Labs</title>
     <meta name="description" content="An independent research repository and data registry tracking the global top 50 AI-First corporations, evaluating enterprise pivots, sovereign compute clusters, custom silicon architectures, and frontier model deployments.">
-    <meta name="keywords" content="AI First Corporations, Enterprise AI Shift, Sovereign Compute, Custom Silicon, NVIDIA Blackwell, Google DeepMind, OpenAI Stargate, Microsoft Copilot, Meta Llama, Anthropic Claude, Monolith Labs">
+    <meta name="keywords" content="AI First Corporations, Enterprise AI Shift, Sovereign Compute, Custom Silicon, NVIDIA Blackwell, Google DeepMind, OpenAI Stargate, Microsoft Copilot, Meta Llama, Anthropic Claude, DeepSeek, Monolith Labs">
     <meta name="author" content="Monolith Labs">
     <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/jq8MDZg6/Monolith-Labs.png">
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/jq8MDZg6/Monolith-Labs.png">
+
     <link rel="canonical" href="https://monolithlabz.github.io/ai-first-corporation.html">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://monolithlabz.github.io/ai-first-corporation.html">
-    <meta property="og:title" content="AI First Corporations Observatory — Enterprise Index & Research Repository">
+    <meta property="og:title" content="AI First Corporations Observatory — Monolith Labs">
     <meta property="og:description" content="Tracking, evaluating, and cataloging the global top 50 AI-First enterprise transformations, custom ASICs, compute footprints, and frontier model deployments.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop">
+    <meta property="og:image" content="https://i.postimg.cc/V6WG62gZ/ML-COVER.png">
     <meta property="og:site_name" content="Monolith Labs">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI First Corporations Observatory — Monolith Labs">
-    <meta name="twitter:description" content="Empirical tracking of the top 50 corporations adapting to and defining the AI-First era.">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://monolithlabz.github.io/ai-first-corporation.html">
+    <meta property="twitter:title" content="AI First Corporations Observatory — Monolith Labs">
+    <meta property="twitter:description" content="Empirical tracking of the top 50 corporations adapting to and defining the AI-First era.">
+    <meta property="twitter:image" content="https://i.postimg.cc/V6WG62gZ/ML-COVER.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "Global Top 50 AI-First Corporations Index",
+        "description": "Empirical observatory cataloging enterprise AI-First transitions, custom silicon ASICs, compute footprints, and foundation model architectures.",
+        "url": "https://monolithlabz.github.io/ai-first-corporation.html",
+        "creator": {
+            "@type": "Organization",
+            "name": "Monolith Labs",
+            "url": "https://monolithlabz.github.io/"
+        }
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            /* High-Contrast Modern Light Theme (Monolith Clean Orange & Slate) */
-            --bg-base: #f8fafc;
-            --bg-surface: #ffffff;
-            --bg-surface-elevated: #f1f5f9;
-            --border-color: #e2e8f0;
-            --text-primary: #0f172a;
-            --text-secondary: #475569;
-            --text-muted: #94a3b8;
-            --accent-primary: #ea580c; /* Vivid Monolith Amber/Orange */
-            --accent-hover: #c2410c;
-            --accent-soft: rgba(234, 88, 12, 0.08);
-            --navbar-bg: rgba(255, 255, 255, 0.88);
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
-            --badge-tier1-bg: rgba(234, 88, 12, 0.1);
-            --badge-tier1-text: #c2410c;
-            --transition-speed: 0.2s;
-            --font-code: 'JetBrains Mono', monospace;
+        :root, [data-theme="dark"] {
+            --bg: #0a0b0d;
+            --bg-elevated: #131519;
+            --text-primary: #f0f2f5;
+            --text-secondary: #8c939e;
+            --text-tertiary: #525a66;
+            --border: rgba(255, 255, 255, 0.09);
+            --border-strong: rgba(255, 255, 255, 0.35);
+            --card-bg: #0e1013;
+            --accent-muted: #2a2e35;
+            --card-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.6);
+            --nav-bg: rgba(10, 11, 13, 0.88);
+            --mono-font: 'JetBrains Mono', monospace;
+            --sans-font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            
+            /* Tier Badges */
+            --tier1-bg: rgba(234, 88, 12, 0.12);
+            --tier1-border: rgba(234, 88, 12, 0.3);
+            --tier1-text: #f97316;
+
+            --tier2-bg: rgba(16, 185, 129, 0.12);
+            --tier2-border: rgba(16, 185, 129, 0.3);
+            --tier2-text: #10b981;
+
+            --tier3-bg: rgba(59, 130, 246, 0.12);
+            --tier3-border: rgba(59, 130, 246, 0.3);
+            --tier3-text: #3b82f6;
         }
 
-        [data-theme="dark"] {
-            /* Premium Monolith Obsidian Theme */
-            --bg-base: #080c14;
-            --bg-surface: #0f172a;
-            --bg-surface-elevated: #1e293b;
-            --border-color: #334155;
-            --text-primary: #f8fafc;
-            --text-secondary: #cbd5e1;
-            --text-muted: #64748b;
-            --accent-primary: #f97316;
-            --accent-hover: #ea580c;
-            --accent-soft: rgba(249, 115, 22, 0.12);
-            --navbar-bg: rgba(8, 12, 20, 0.88);
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
-            --badge-tier1-bg: rgba(249, 115, 22, 0.18);
-            --badge-tier1-text: #ffedd5;
+        [data-theme="light"] {
+            --bg: #f6f7f9;
+            --bg-elevated: #ffffff;
+            --text-primary: #0e1013;
+            --text-secondary: #5a6270;
+            --text-tertiary: #8c939e;
+            --border: rgba(14, 16, 19, 0.1);
+            --border-strong: rgba(14, 16, 19, 0.4);
+            --card-bg: #ffffff;
+            --accent-muted: #e2e5eb;
+            --card-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.08);
+            --nav-bg: rgba(246, 247, 249, 0.88);
+
+            --tier1-bg: rgba(234, 88, 12, 0.08);
+            --tier1-border: rgba(234, 88, 12, 0.25);
+            --tier1-text: #c2410c;
+
+            --tier2-bg: rgba(16, 185, 129, 0.08);
+            --tier2-border: rgba(16, 185, 129, 0.25);
+            --tier2-text: #047857;
+
+            --tier3-bg: rgba(59, 130, 246, 0.08);
+            --tier3-border: rgba(59, 130, 246, 0.25);
+            --tier3-text: #1d4ed8;
         }
 
         * {
@@ -82,275 +117,313 @@
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg-base);
+            font-family: var(--sans-font);
+            background-color: var(--bg);
             color: var(--text-primary);
             line-height: 1.6;
-            transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+            letter-spacing: -0.015em;
+            -webkit-font-smoothing: antialiased;
+            transition: background-color 0.25s ease, color 0.25s ease;
+            overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5 {
-            font-weight: 700;
-            letter-spacing: -0.03em;
+        .bg-grid-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+            background-image: 
+                linear-gradient(to right, var(--border) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+            background-size: 60px 60px;
+            opacity: 0.35;
+        }
+
+        .mono {
+            font-family: var(--mono-font);
+            font-size: 0.72rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.15s ease, border-color 0.15s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 2;
         }
 
         /* Nav Header Styles */
-        .header-nav {
-            position: sticky;
+        header.nav-header {
+            position: fixed;
             top: 0;
-            z-index: 1000;
-            background-color: var(--navbar-bg);
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background-color: var(--nav-bg);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
-            transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+            border-bottom: 1px solid var(--border);
+            transition: background-color 0.25s ease, border-color 0.25s ease;
         }
 
-        .nav-container {
-            max-width: 1440px;
+        nav {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 1.1rem 2rem;
+            padding: 0 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 3.75rem;
         }
 
-        .brand-logo {
-            font-size: 1.2rem;
-            font-weight: 800;
-            text-decoration: none;
-            color: var(--text-primary);
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            letter-spacing: -0.04em;
-        }
-
-        .brand-logo span {
-            color: var(--accent-primary);
-        }
-
-        .brand-tag {
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            padding: 0.2rem 0.5rem;
-            background-color: var(--accent-soft);
-            color: var(--accent-primary);
-            border-radius: 4px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            list-style: none;
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
+        .nav-logo {
             font-weight: 600;
-            transition: color var(--transition-speed) ease;
-        }
-
-        .nav-link:hover, .nav-link.active {
-            color: var(--accent-primary);
-        }
-
-        /* Mobile Menu Hamburger */
-        .menu-hamburger {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-            position: relative;
-            z-index: 1001;
-        }
-
-        .menu-hamburger span {
-            display: block;
-            width: 22px;
-            height: 2px;
-            background-color: var(--text-primary);
-            margin: 4px 0;
-            transition: var(--transition-speed) ease;
-        }
-
-        .menu-hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(4px, 4px);
-        }
-        .menu-hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-        .menu-hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(4px, -4px);
-        }
-
-        /* Theme Switcher Widget */
-        .theme-toggle-widget {
+            letter-spacing: 0.02em;
+            font-size: 0.9rem;
             display: flex;
             align-items: center;
-            background: var(--bg-surface-elevated);
-            border: 1px solid var(--border-color);
-            border-radius: 30px;
-            padding: 0.2rem;
-            cursor: pointer;
+            gap: 0.65rem;
+            font-family: var(--mono-font);
+        }
+
+        .nav-logo .reticle {
+            width: 12px;
+            height: 12px;
             position: relative;
-            width: 52px;
-            height: 28px;
-            transition: all var(--transition-speed) ease;
+            flex-shrink: 0;
         }
-
-        .theme-toggle-ball {
-            width: 20px;
-            height: 20px;
-            background-color: var(--accent-primary);
-            border-radius: 50%;
+        .nav-logo .reticle::before,
+        .nav-logo .reticle::after {
+            content: '';
             position: absolute;
-            left: 3px;
-            transition: transform var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+            width: 5px;
+            height: 5px;
+            border: 1px solid var(--text-primary);
+        }
+        .nav-logo .reticle::before { top: 0; left: 0; border-width: 1px 0 0 1px; }
+        .nav-logo .reticle::after { bottom: 0; right: 0; border-width: 0 1px 1px 0; }
+
+        .nav-center-links {
+            display: flex;
+            align-items: center;
+            gap: 1.75rem;
         }
 
-        [data-theme="dark"] .theme-toggle-ball {
-            transform: translateX(24px);
+        .nav-center-links a {
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            font-family: var(--mono-font);
         }
 
-        /* Hero Layout Architecture */
+        .nav-center-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .theme-toggle-btn {
+            background-color: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            width: 36px;
+            height: 36px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .theme-toggle-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: currentColor;
+        }
+
+        .theme-toggle-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--border-strong);
+            background-color: var(--bg-elevated);
+        }
+
+        .btn-pill-secondary {
+            background-color: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            padding: 0.45rem 0.85rem;
+            border-radius: 4px;
+            font-size: 0.68rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            font-family: var(--mono-font);
+        }
+
+        .btn-pill-secondary:hover {
+            color: var(--text-primary);
+            border-color: var(--border-strong);
+            background-color: var(--bg-elevated);
+        }
+
+        .btn-pill-primary {
+            background-color: var(--text-primary);
+            color: var(--bg);
+            border: 1px solid var(--text-primary);
+            padding: 0.6rem 1.25rem;
+            border-radius: 4px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            font-family: var(--mono-font);
+        }
+
+        .btn-pill-primary:hover {
+            background-color: var(--text-secondary);
+            border-color: var(--text-secondary);
+            color: var(--bg);
+        }
+
+        /* Hero Section */
         .hero-section {
-            padding: 7.5rem 2rem 5rem 2rem;
-            max-width: 1100px;
-            margin: 0 auto;
+            padding-top: 10rem;
+            padding-bottom: 4.5rem;
             text-align: center;
+            position: relative;
         }
 
-        .hero-tagline {
-            text-transform: uppercase;
-            font-size: 0.72rem;
-            font-weight: 800;
-            letter-spacing: 0.14em;
-            color: var(--accent-primary);
+        .hero-eyebrow {
+            color: var(--text-tertiary);
             margin-bottom: 1.25rem;
             display: inline-block;
-            background-color: var(--accent-soft);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            border: 1px solid rgba(234, 88, 12, 0.2);
+            padding: 0.2rem 0.75rem;
+            border: 1px solid var(--border);
+            background: var(--bg-elevated);
+            border-radius: 2px;
         }
 
         .hero-title {
-            font-size: 3.75rem;
-            line-height: 1.08;
-            margin-bottom: 1.5rem;
+            font-size: 3.25rem;
+            font-weight: 600;
+            letter-spacing: -0.035em;
+            line-height: 1.1;
+            margin-bottom: 1.25rem;
             color: var(--text-primary);
-        }
-
-        .hero-title span {
-            color: var(--accent-primary);
-            background: linear-gradient(135deg, var(--accent-primary) 0%, #f97316 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
         .hero-desc {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
+            font-weight: 300;
             color: var(--text-secondary);
-            max-width: 820px;
-            margin: 0 auto 2.5rem auto;
-            font-weight: 400;
+            max-width: 780px;
+            margin: 0 auto 2.25rem auto;
             line-height: 1.65;
         }
 
-        /* Hero Metrics Counter Bar */
-        .hero-metrics-bar {
+        /* Stats Banner */
+        .stats-banner {
+            margin: 2.5rem 0 4.5rem 0;
+            border: 1px solid var(--border);
+            background-color: var(--card-bg);
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 3.5rem;
-            padding: 2rem;
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            box-shadow: var(--shadow-md);
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            border-radius: 4px;
+            box-shadow: var(--card-shadow);
         }
 
-        .hero-metric-item {
-            text-align: center;
+        .banner-stat-item {
+            text-align: left;
+            padding: 1.75rem 2rem;
+            position: relative;
+            border-right: 1px solid var(--border);
         }
 
-        .hero-metric-val {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--text-primary);
-            font-family: var(--font-code);
+        .banner-stat-item:last-child {
+            border-right: none;
+        }
+
+        .banner-stat-item h3 {
+            font-size: 2.2rem;
+            font-weight: 500;
             letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 0.4rem;
+            font-family: var(--mono-font);
+            color: var(--text-primary);
         }
 
-        .hero-metric-val span {
-            color: var(--accent-primary);
+        .banner-stat-item p {
+            color: var(--text-tertiary);
+            font-size: 0.7rem;
+            letter-spacing: 0.05em;
+            font-family: var(--mono-font);
         }
 
-        .hero-metric-lbl {
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--text-muted);
-            margin-top: 0.35rem;
-            font-weight: 600;
-        }
-
-        /* Layout Block Section Wrapper */
-        .content-block-wrapper {
-            padding: 5.5rem 0;
-        }
-
-        .bg-alt-block {
-            background-color: var(--bg-surface-elevated);
-            transition: background-color var(--transition-speed) ease;
-        }
-
-        .dashboard-container {
-            max-width: 1440px;
-            margin: 0 auto;
-            padding: 0 2rem;
+        /* Content Section Architecture */
+        .content-section {
+            scroll-margin-top: 80px;
+            margin-bottom: 5.5rem;
         }
 
         .section-header-block {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            margin-bottom: 2.5rem;
-            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
             padding-bottom: 1.25rem;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
-        .section-title {
-            font-size: 1.85rem;
+        .section-title-text {
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: -0.025em;
             color: var(--text-primary);
-            letter-spacing: -0.03em;
         }
 
-        .section-subtitle {
+        .section-subtitle-text {
             color: var(--text-secondary);
-            font-size: 0.92rem;
+            font-size: 0.88rem;
             margin-top: 0.35rem;
-            font-weight: 400;
+            font-weight: 300;
         }
 
-        /* Controls & Search Filter Panels */
+        /* Search & Control Panel */
         .control-panel {
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1rem 1.25rem;
-            margin-bottom: 1.75rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 0.85rem 1.25rem;
+            margin-bottom: 1.5rem;
             display: flex;
             gap: 1rem;
             align-items: center;
-            box-shadow: var(--shadow-sm);
             flex-wrap: wrap;
         }
 
@@ -359,7 +432,7 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
-            min-width: 280px;
+            min-width: 260px;
         }
 
         .search-input {
@@ -367,63 +440,67 @@
             background-color: transparent;
             border: none;
             color: var(--text-primary);
-            padding: 0.5rem 0.25rem;
+            padding: 0.4rem 0.25rem;
             font-family: inherit;
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             outline: none;
         }
 
         .search-input::placeholder {
-            color: var(--text-muted);
+            color: var(--text-tertiary);
         }
 
         .filter-select {
-            background-color: var(--bg-surface-elevated);
-            border: 1px solid var(--border-color);
+            background-color: var(--bg-elevated);
+            border: 1px solid var(--border);
             color: var(--text-primary);
-            padding: 0.55rem 1rem;
-            border-radius: 8px;
-            font-family: inherit;
-            font-size: 0.85rem;
+            padding: 0.5rem 0.85rem;
+            border-radius: 4px;
+            font-family: var(--mono-font);
+            font-size: 0.78rem;
             outline: none;
             cursor: pointer;
-            font-weight: 600;
         }
 
         /* Table Architecture */
         .table-responsive-wrapper {
             overflow-x: auto;
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            box-shadow: var(--shadow-lg);
-            margin-top: 1.5rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            box-shadow: var(--card-shadow);
+            margin-top: 1rem;
+            max-width: 100%;
         }
 
         .data-matrix-table {
             width: 100%;
             border-collapse: collapse;
             text-align: left;
-            font-size: 0.88rem;
+            font-size: 0.86rem;
+            min-width: 800px;
         }
 
         .data-matrix-table th {
-            background-color: var(--bg-surface-elevated);
-            color: var(--text-secondary);
-            font-weight: 700;
-            padding: 1.1rem 1.25rem;
-            border-bottom: 1px solid var(--border-color);
-            text-transform: uppercase;
+            background-color: var(--bg-elevated);
+            color: var(--text-tertiary);
+            font-weight: 600;
+            padding: 1rem 1.1rem;
+            border-bottom: 1px solid var(--border);
+            font-family: var(--mono-font);
             font-size: 0.68rem;
+            text-transform: uppercase;
             letter-spacing: 0.08em;
             white-space: nowrap;
         }
 
         .data-matrix-table td {
-            padding: 1.1rem 1.25rem;
-            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 1.1rem;
+            border-bottom: 1px solid var(--border);
             color: var(--text-secondary);
             vertical-align: middle;
+            word-break: break-word;
+            overflow-wrap: break-word;
         }
 
         .data-matrix-table tr:last-child td {
@@ -431,336 +508,323 @@
         }
 
         .data-matrix-table tr:hover td {
-            background-color: var(--bg-surface-elevated);
+            background-color: var(--bg-elevated);
             color: var(--text-primary);
         }
 
-        /* Dynamic Performance & Category Pills */
+        /* Badges & Pills */
         .performance-pill {
-            padding: 0.3rem 0.65rem;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 0.75rem;
+            padding: 0.25rem 0.55rem;
+            border-radius: 2px;
+            font-weight: 600;
+            font-size: 0.72rem;
             border: 1px solid transparent;
             display: inline-block;
             white-space: nowrap;
-            font-family: var(--font-code);
+            font-family: var(--mono-font);
         }
 
         .pill-tier1 {
-            background-color: rgba(234, 88, 12, 0.1);
-            color: var(--accent-primary);
-            border-color: rgba(234, 88, 12, 0.25);
+            background-color: var(--tier1-bg);
+            color: var(--tier1-text);
+            border-color: var(--tier1-border);
         }
 
         .pill-tier2 {
-            background-color: rgba(16, 185, 129, 0.1);
-            color: #10b981;
-            border-color: rgba(16, 185, 129, 0.25);
+            background-color: var(--tier2-bg);
+            color: var(--tier2-text);
+            border-color: var(--tier2-border);
         }
 
         .pill-tier3 {
-            background-color: rgba(59, 130, 246, 0.1);
-            color: #3b82f6;
-            border-color: rgba(59, 130, 246, 0.25);
+            background-color: var(--tier3-bg);
+            color: var(--tier3-text);
+            border-color: var(--tier3-border);
         }
 
         .pill-category {
-            background-color: var(--bg-surface-elevated);
+            background-color: var(--bg-elevated);
             color: var(--text-secondary);
-            border: 1px solid var(--border-color);
-            font-size: 0.72rem;
+            border: 1px solid var(--border);
+            font-size: 0.7rem;
             padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-
-        /* Interactive Buttons */
-        .btn-action {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background-color: var(--accent-primary);
-            color: #ffffff !important;
-            border: none;
-            padding: 0.7rem 1.25rem;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.85rem;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
-        }
-
-        .btn-action:hover {
-            background-color: var(--accent-hover);
-            transform: translateY(-1px);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            border: 1px solid var(--border-color);
-            color: var(--text-primary) !important;
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--bg-surface-elevated);
+            border-radius: 2px;
+            white-space: nowrap;
         }
 
         .rank-badge {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 28px;
-            height: 28px;
-            background-color: var(--bg-surface-elevated);
+            width: 26px;
+            height: 26px;
+            background-color: var(--bg-elevated);
             color: var(--text-primary);
-            border-radius: 6px;
-            font-weight: 800;
-            font-size: 0.8rem;
-            font-family: var(--font-code);
+            border-radius: 2px;
+            font-weight: 700;
+            font-size: 0.78rem;
+            font-family: var(--mono-font);
+            border: 1px solid var(--border);
         }
 
-        tr:nth-child(1) .rank-badge { background-color: rgba(234, 88, 12, 0.18); color: var(--accent-primary); }
-        tr:nth-child(2) .rank-badge { background-color: rgba(234, 88, 12, 0.12); color: var(--accent-primary); }
-        tr:nth-child(3) .rank-badge { background-color: rgba(234, 88, 12, 0.08); color: var(--accent-primary); }
-
-        .hyperlink-verified {
-            color: var(--accent-primary);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.25rem;
-            font-size: 0.82rem;
+        .ticker-symbol {
+            font-family: var(--mono-font);
+            font-size: 0.7rem;
+            color: var(--text-tertiary);
+            background-color: var(--bg-elevated);
+            border: 1px solid var(--border);
+            padding: 0.15rem 0.4rem;
+            border-radius: 2px;
+            margin-left: 0.35rem;
+            display: inline-block;
         }
 
-        .hyperlink-verified:hover {
-            text-decoration: underline;
-        }
-
-        /* Generic Matrix Grid Layout */
+        /* Matrix Card Grid */
         .premium-grid-matrix {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.25rem;
         }
 
         .premium-card-node {
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 2rem;
-            box-shadow: var(--shadow-sm);
-            transition: transform var(--transition-speed) ease, border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 1.75rem;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.2s ease, border-color 0.2s ease;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            overflow: hidden;
         }
 
         .premium-card-node:hover {
             transform: translateY(-2px);
-            border-color: var(--accent-primary);
-            box-shadow: var(--shadow-lg);
+            border-color: var(--border-strong);
         }
 
-        .premium-card-header {
+        .card-header-top {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 1rem;
-            margin-bottom: 1.25rem;
+            gap: 0.75rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.85rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
         }
 
-        .premium-card-title {
-            font-size: 1.3rem;
-            font-weight: 800;
+        .card-title-text {
+            font-size: 1.2rem;
+            font-weight: 600;
             color: var(--text-primary);
-            letter-spacing: -0.02em;
-        }
-
-        .ticker-symbol {
-            font-family: var(--font-code);
-            font-size: 0.75rem;
-            color: var(--accent-primary);
-            background-color: var(--accent-soft);
-            padding: 0.15rem 0.45rem;
-            border-radius: 4px;
-            font-weight: 700;
-            margin-left: 0.4rem;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.25rem;
         }
 
         .meta-field-group {
-            margin-bottom: 1.1rem;
+            margin-bottom: 0.85rem;
         }
 
         .meta-field-label {
-            font-size: 0.68rem;
+            font-size: 0.65rem;
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            color: var(--accent-primary);
-            font-weight: 800;
-            margin-bottom: 0.25rem;
+            color: var(--text-tertiary);
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            font-family: var(--mono-font);
         }
 
         .meta-field-val {
-            font-size: 0.92rem;
+            font-size: 0.88rem;
             color: var(--text-primary);
-            font-weight: 700;
+            font-weight: 500;
+            overflow-wrap: break-word;
         }
 
         .meta-field-desc {
             font-size: 0.84rem;
             color: var(--text-secondary);
             line-height: 1.55;
-            margin-top: 0.35rem;
+            margin-top: 0.25rem;
+            font-weight: 300;
+            overflow-wrap: break-word;
         }
 
-        /* Predictive Layout Grid */
+        /* Pillars & Predictive Grid */
         .predictive-layout {
             display: grid;
-            grid-template-columns: 1fr 1.25fr;
-            gap: 2rem;
-            margin-top: 1.5rem;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 1.5rem;
+            margin-top: 1.25rem;
         }
 
         .predictive-summary-card {
-            background-color: var(--bg-surface);
-            border: 1px solid var(--accent-primary);
-            border-radius: 14px;
-            padding: 2.5rem;
-            box-shadow: var(--shadow-lg);
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 2.25rem;
+            box-shadow: var(--card-shadow);
         }
 
         .predictive-metrics-panel {
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 2.5rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 2.25rem;
         }
 
         .factor-list {
             list-style: none;
-            margin-top: 1rem;
+            margin-top: 0.75rem;
         }
 
         .factor-item {
             display: flex;
             align-items: flex-start;
-            gap: 1.25rem;
-            padding: 1.25rem 0;
-            border-bottom: 1px solid var(--border-color);
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
         }
 
         .factor-item:last-child {
             border-bottom: none;
         }
 
-        /* Citation Cards */
+        /* Citation & arXiv Section Layout Fix */
         .citations-layout-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.25rem;
         }
 
         .citation-paper-card {
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 2.25rem;
-            position: relative;
-            transition: border-color var(--transition-speed) ease;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: border-color 0.2s ease;
+            overflow: hidden;
         }
 
         .citation-paper-card:hover {
-            border-color: var(--accent-primary);
+            border-color: var(--border-strong);
+        }
+
+        .citation-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.85rem;
+            flex-wrap: wrap;
         }
 
         .doi-tag {
-            position: absolute;
-            top: 2.25rem;
-            right: 2.25rem;
-            background-color: var(--accent-soft); 
-            color: var(--accent-primary);
-            font-size: 0.7rem;
-            font-weight: 700;
+            background-color: var(--bg-elevated);
+            color: var(--text-tertiary);
+            border: 1px solid var(--border);
+            font-size: 0.68rem;
+            font-weight: 500;
             padding: 0.2rem 0.55rem;
-            border-radius: 4px;
-            font-family: var(--font-code);
+            border-radius: 2px;
+            font-family: var(--mono-font);
+            white-space: nowrap;
         }
 
         .paper-title {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-            max-width: 82%;
+            font-size: 1.15rem;
+            margin-bottom: 0.4rem;
             color: var(--text-primary);
-            letter-spacing: -0.02em;
+            letter-spacing: -0.015em;
+            line-height: 1.35;
+            font-weight: 600;
+            word-break: break-word;
+            overflow-wrap: break-word;
         }
 
         .paper-authors {
-            font-size: 0.85rem;
-            color: var(--accent-primary);
-            margin-bottom: 1rem;
-            font-weight: 600;
+            font-size: 0.82rem;
+            color: var(--text-tertiary);
+            margin-bottom: 0.85rem;
+            font-weight: 400;
+            line-height: 1.4;
         }
 
         .paper-abstract {
             color: var(--text-secondary);
-            font-size: 0.88rem;
+            font-size: 0.86rem;
             margin-bottom: 1.5rem;
             line-height: 1.6;
+            font-weight: 300;
+            overflow-wrap: break-word;
         }
 
         .paper-footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border-color);
-            padding-top: 1.25rem;
+            font-size: 0.78rem;
+            color: var(--text-tertiary);
+            border-top: 1px solid var(--border);
+            padding-top: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-family: var(--mono-font);
         }
 
         /* Footer Architecture */
-        .footer-root {
-            background-color: var(--bg-surface);
-            border-top: 1px solid var(--border-color);
+        footer.footer-root {
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border);
             color: var(--text-secondary);
             font-size: 0.85rem;
-            transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+            margin-top: 6rem;
         }
 
         .footer-container {
-            max-width: 1440px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 5rem 2rem 2.5rem 2rem;
+            padding: 4.5rem 1.5rem 2.5rem 1.5rem;
             display: grid;
             grid-template-columns: 2fr repeat(3, 1fr);
-            gap: 4rem;
+            gap: 3.5rem;
         }
 
         .footer-brand-column h3 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--text-primary);
-            margin-bottom: 1rem;
-            letter-spacing: -0.03em;
+            margin-bottom: 0.85rem;
+            letter-spacing: -0.02em;
+            font-family: var(--mono-font);
         }
 
         .footer-brand-column p {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
+            color: var(--text-tertiary);
+            margin-bottom: 1.25rem;
             max-width: 360px;
             line-height: 1.6;
+            font-weight: 300;
+            font-size: 0.82rem;
         }
 
         .footer-column h4 {
             color: var(--text-primary);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
+            font-family: var(--mono-font);
         }
 
         .footer-links-list {
@@ -768,41 +832,36 @@
         }
 
         .footer-links-list li {
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.65rem;
         }
 
         .footer-links-list a {
             color: var(--text-secondary);
             text-decoration: none;
-            transition: color var(--transition-speed) ease;
+            transition: color 0.15s ease;
+            font-size: 0.8rem;
+            font-family: var(--mono-font);
         }
 
         .footer-links-list a:hover {
-            color: var(--accent-primary);
-        }
-
-        .footer-base-bar {
-            max-width: 1440px;
-            margin: 0 auto;
-            padding: 2rem;
-            border-top: 1px solid var(--border-color);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        .monolith-credit {
-            font-weight: 700;
             color: var(--text-primary);
         }
 
-        .monolith-credit span {
-            color: var(--accent-primary);
+        .footer-base-bar {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            font-family: var(--mono-font);
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
-        /* Viewport Media Queries */
         @media (max-width: 1024px) {
             .footer-container {
                 grid-template-columns: 1fr 1fr;
@@ -811,353 +870,338 @@
             .predictive-layout {
                 grid-template-columns: 1fr;
             }
-            .citations-layout-grid {
-                grid-template-columns: 1fr;
-            }
         }
 
         @media (max-width: 768px) {
-            .hero-title { font-size: 2.6rem; }
-            .menu-hamburger { display: block; }
-            
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--bg-surface);
-                border-bottom: 1px solid var(--border-color);
-                padding: 1.5rem 2rem;
-                gap: 1.25rem;
-                box-shadow: var(--shadow-lg);
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .section-header-block { flex-direction: column; align-items: flex-start; gap: 1rem; }
+            .hero-title { font-size: 2.25rem; }
+            .section-header-block { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
             .control-panel { flex-direction: column; align-items: stretch; }
             .footer-container { grid-template-columns: 1fr; gap: 2rem; }
-            .footer-base-bar { flex-direction: column; gap: 1rem; text-align: center; }
-            .premium-grid-matrix { grid-template-columns: 1fr; }
+            .footer-base-bar { flex-direction: column; text-align: center; justify-content: center; }
+            .citations-layout-grid, .premium-grid-matrix { grid-template-columns: 1fr; }
+            .nav-center-links { display: none; }
         }
     </style>
 </head>
 <body>
 
+    <div class="bg-grid-pattern"></div>
+
     <!-- Main Navigation Bar -->
-    <header class="header-nav">
-        <nav class="nav-container">
-            <a href="#" class="brand-logo">
-                Monolith<span>Labs</span>
-                <span class="brand-tag">AI Observatory</span>
+    <header class="nav-header">
+        <nav>
+            <a href="https://monolithlabz.github.io/" class="nav-logo">
+                <span class="reticle"></span>MONOLITH LABS.
             </a>
-            <button class="menu-hamburger" id="hamburger-btn" aria-label="Toggle Navigation Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links" id="nav-menu">
-                <li><a href="#registry-section" class="nav-link active">Top 50 Registry</a></li>
-                <li><a href="#shift-section" class="nav-link">Enterprise Shift</a></li>
-                <li><a href="#compute-section" class="nav-link">Silicon Matrix</a></li>
-                <li><a href="#cards-section" class="nav-link">Corporations Grid</a></li>
-                <li><a href="#citations-section" class="nav-link">Research Papers</a></li>
-                <li>
-                    <div class="theme-toggle-widget" id="theme-toggler" aria-label="Toggle UI Color Scheme" role="button" tabindex="0">
-                        <div class="theme-toggle-ball"></div>
-                    </div>
-                </li>
-            </ul>
+            <div class="nav-center-links">
+                <a href="#registry-section">Top 50 Registry</a>
+                <a href="#shift-section">Enterprise Shift</a>
+                <a href="#compute-section">Silicon Matrix</a>
+                <a href="#cards-section">Corporations Grid</a>
+                <a href="#citations-section">Research Literature</a>
+            </div>
+            <div class="nav-right">
+                <a href="https://monolithlabz.github.io/" class="btn-pill-secondary mono">&larr; Home</a>
+                <button class="theme-toggle-btn" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle Theme">
+                    <svg id="themeIcon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <!-- Rendered via JS -->
+                    </svg>
+                </button>
+            </div>
         </nav>
     </header>
 
-    <main>
+    <main class="container">
         <!-- Hero Section -->
         <section class="hero-section">
-            <span class="hero-tagline">Global Enterprise Intelligence Index</span>
-            <h1 class="hero-title">The Top 50 <span>AI-First</span> Corporations</h1>
-            <p class="hero-desc">An empirical observatory cataloging the definitive corporate transformation from Cloud-First to AI-First architectures. Tracking sovereign compute clusters, custom silicon ASICs, foundation models, and business model shifts across the global economy.</p>
+            <span class="hero-eyebrow mono">Global Enterprise Intelligence Observatory</span>
+            <h1 class="hero-title">The Top 50 AI-First Corporations</h1>
+            <p class="hero-desc">An empirical research repository cataloging the corporate transition from Cloud-First to AI-First architectures. Tracking sovereign compute clusters, custom silicon ASICs, foundation model ecosystems, and workflow transformations.</p>
             
-            <div style="display:flex; justify-content:center; gap:1rem; flex-wrap: wrap;">
-                <a href="#registry-section" class="btn-action">Explore Global 50 Registry</a>
-                <a href="#compute-section" class="btn-action btn-secondary">Custom Silicon & Compute Matrix</a>
+            <div style="display:flex; justify-content:center; gap:0.85rem; flex-wrap: wrap;">
+                <a href="#registry-section" class="btn-pill-primary">Explore Top 50 Registry</a>
+                <a href="#compute-section" class="btn-pill-secondary">Custom Silicon & Compute Matrix</a>
             </div>
 
             <!-- Quantitative Summary Bar -->
-            <div class="hero-metrics-bar">
-                <div class="hero-metric-item">
-                    <div class="hero-metric-val">$18.4<span>T+</span></div>
-                    <div class="hero-metric-lbl">Combined Market Cap</div>
+            <div class="stats-banner">
+                <div class="banner-stat-item">
+                    <h3>$18.4T+</h3>
+                    <p class="mono">Combined Market Cap</p>
                 </div>
-                <div class="hero-metric-item">
-                    <div class="hero-metric-val">2.8M<span>+</span></div>
-                    <div class="hero-metric-lbl">H100/B200 GPU Equivalents</div>
+                <div class="banner-stat-item">
+                    <h3>2.8M+</h3>
+                    <p class="mono">H100/B200 GPU Footprint Tracked</p>
                 </div>
-                <div class="hero-metric-item">
-                    <div class="hero-metric-val">$240<span>B+</span></div>
-                    <div class="hero-metric-lbl">Annual AI Infrastructure Capex</div>
+                <div class="banner-stat-item">
+                    <h3>$240B+</h3>
+                    <p class="mono">Annual AI Infrastructure Capex</p>
                 </div>
-                <div class="hero-metric-item">
-                    <div class="hero-metric-val">50<span> / 50</span></div>
-                    <div class="hero-metric-lbl">Verified Enterprise Profiles</div>
+                <div class="banner-stat-item">
+                    <h3>50 / 50</h3>
+                    <p class="mono">Verified Enterprise Profiles</p>
                 </div>
             </div>
         </section>
 
         <!-- Global Top 50 Registry Section -->
-        <section id="registry-section" class="content-block-wrapper">
-            <div class="dashboard-container">
-                <div class="section-header-block">
-                    <div>
-                        <h2 class="section-title">Global Top 50 AI-First Corporations Registry</h2>
-                        <p class="section-subtitle">Comprehensive ranking of enterprise tech giants, frontier labs, pure-play innovators, and industrial transformers.</p>
-                    </div>
-                    <button class="btn-action" id="btn-download-csv">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Download Full Dataset (CSV)
-                    </button>
+        <section id="registry-section" class="content-section">
+            <div class="section-header-block">
+                <div>
+                    <h2 class="section-title-text">Global Top 50 AI-First Corporations Registry</h2>
+                    <p class="section-subtitle-text">Comprehensive ranking of enterprise tech hyperscalers, frontier labs, pure-play innovators, and industrial transformers.</p>
                 </div>
+                <button class="btn-pill-primary" id="btn-download-csv">
+                    Download Full Dataset (CSV) &rarr;
+                </button>
+            </div>
 
-                <!-- Interactive Filters -->
-                <div class="control-panel">
-                    <div class="search-input-wrapper">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                        <input type="text" id="registry-search" class="search-input" placeholder="Search by company name, stock ticker, flagship model, custom chip, or industry...">
-                    </div>
-                    <select id="category-filter" class="filter-select">
-                        <option value="ALL">All Industry Sectors</option>
-                        <option value="Hyperscale & Frontier AI">Hyperscale & Frontier AI</option>
-                        <option value="Enterprise Software & Agents">Enterprise Software & Agents</option>
-                        <option value="Semiconductor & Custom Silicon">Semiconductor & Custom Silicon</option>
-                        <option value="Autonomous Platforms & Robotics">Autonomous Platforms & Robotics</option>
-                        <option value="Industrial & Financial Tech">Industrial & Financial Tech</option>
-                    </select>
+            <!-- Interactive Filters -->
+            <div class="control-panel">
+                <div class="search-input-wrapper">
+                    <input type="text" id="registry-search" class="search-input" placeholder="Search by company name, stock ticker, flagship model, custom chip, or industry...">
                 </div>
+                <select id="category-filter" class="filter-select">
+                    <option value="ALL">All Industry Sectors</option>
+                    <option value="Hyperscale & Frontier AI">Hyperscale & Frontier AI</option>
+                    <option value="Enterprise Software & Agents">Enterprise Software & Agents</option>
+                    <option value="Semiconductor & Custom Silicon">Semiconductor & Custom Silicon</option>
+                    <option value="Autonomous Platforms & Robotics">Autonomous Platforms & Robotics</option>
+                    <option value="Industrial & Financial Tech">Industrial & Financial Tech</option>
+                </select>
+            </div>
 
-                <!-- Dynamic Data Table -->
-                <div class="table-responsive-wrapper">
-                    <table class="data-matrix-table">
-                        <thead>
-                            <tr>
-                                <th style="width: 70px;">Rank</th>
-                                <th>Corporation</th>
-                                <th>Category Sector</th>
-                                <th>Pivot Era</th>
-                                <th>Flagship AI Stack / Models</th>
-                                <th>Primary Compute & Custom Silicon</th>
-                                <th style="width: 130px;">AI First Score</th>
-                                <th>Verified Asset</th>
-                            </tr>
-                        </thead>
-                        <tbody id="registry-table-body">
-                            <!-- Populated dynamically by JS -->
-                        </tbody>
-                    </table>
-                </div>
+            <!-- Dynamic Data Table -->
+            <div class="table-responsive-wrapper">
+                <table class="data-matrix-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 60px;">Rank</th>
+                            <th>Corporation</th>
+                            <th>Category Sector</th>
+                            <th>Pivot Era</th>
+                            <th>Flagship AI Stack / Models</th>
+                            <th>Primary Compute & Custom Silicon</th>
+                            <th style="width: 120px;">AI Score</th>
+                            <th>Verified Asset</th>
+                        </tr>
+                    </thead>
+                    <tbody id="registry-table-body">
+                        <!-- Populated dynamically by JS -->
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <!-- The Enterprise AI-First Pivot Framework -->
-        <section id="shift-section" class="content-block-wrapper bg-alt-block">
-            <div class="dashboard-container">
-                <div class="section-header-block">
-                    <div>
-                        <h2 class="section-title">The Enterprise AI-First Transformation Model</h2>
-                        <p class="section-subtitle">Evaluating the 3 key pillars separating modern AI-First corporations from legacy cloud adoption.</p>
+        <section id="shift-section" class="content-section">
+            <div class="section-header-block">
+                <div>
+                    <h2 class="section-title-text">The Enterprise AI-First Transformation Model</h2>
+                    <p class="section-subtitle-text">Evaluating the 3 key pillars separating modern AI-First corporations from legacy cloud adoption.</p>
+                </div>
+            </div>
+
+            <div class="predictive-layout">
+                <div class="predictive-summary-card">
+                    <span class="badge" style="margin-bottom: 1rem; display: inline-block;">PARADIGM DEFINITION</span>
+                    <h3 style="font-size: 1.8rem; margin: 0.5rem 0 1rem 0; color: var(--text-primary);">What Defines an "AI-First" Corporation?</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.25rem; font-size: 0.92rem; font-weight: 300; line-height: 1.65;">
+                        An AI-First corporation does not merely embed feature-level copilots into existing software. Instead, it re-architects core workflows around neural foundation models, builds proprietary data loops, deploys custom compute silicon, and measures executive productivity by multi-agent task execution.
+                    </p>
+                    <div style="font-size: 0.8rem; color: var(--text-tertiary); border-top: 1px solid var(--border); padding-top: 1rem;" class="mono">
+                        Primary Indicator: Infrastructure Capex allocation exceeding 30%+ into GPU clusters and custom ASIC development.
                     </div>
                 </div>
 
-                <div class="predictive-layout">
-                    <div class="predictive-summary-card">
-                        <span class="hero-tagline" style="background-color: var(--bg-surface-elevated)">PARADIGM DEFINITION</span>
-                        <h3 style="font-size: 2.1rem; margin: 1rem 0; color: var(--accent-primary);">What Makes a Corporation "AI-First"?</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.65;">
-                            An AI-First corporation does not merely embed feature-level copilots into existing software. Instead, it re-architects core workflows around neural foundation models, builds proprietary data loops, deploys custom compute silicon, and measures executive productivity by multi-agent task execution.
-                        </p>
-                        <div style="font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 1rem;">
-                            <strong>Core Metric:</strong> Capital Expenditure allocation exceeding 30%+ into GPU infrastructure and proprietary model development.
-                        </div>
-                    </div>
-
-                    <div class="predictive-metrics-panel">
-                        <h3 style="font-size: 1.3rem; margin-bottom: 1rem; letter-spacing: -0.02em;">Structural Transformation Pillars</h3>
-                        <ul class="factor-list">
-                            <li class="factor-item">
-                                <div class="performance-pill pill-tier1" style="min-width: 60px; text-align: center;">PILLAR 1</div>
-                                <div>
-                                    <strong style="color: var(--text-primary);">Compute Autonomy & Custom ASICs</strong>
-                                    <p style="font-size: 0.84rem; color: var(--text-secondary); margin-top: 0.25rem;">
-                                        Transitioning from vendor cloud dependency to internal chip architecture (e.g., Google TPU, Meta MTIA, AWS Trainium, Microsoft Maia) to lower cost per token by 40-60%.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="factor-item">
-                                <div class="performance-pill pill-tier2" style="min-width: 60px; text-align: center;">PILLAR 2</div>
-                                <div>
-                                    <strong style="color: var(--text-primary);">Agentic Workflow Automation</strong>
-                                    <p style="font-size: 0.84rem; color: var(--text-secondary); margin-top: 0.25rem;">
-                                        Replacing rule-based deterministic software with autonomous multi-agent systems capable of long-horizon planning, code execution, and customer resolution.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="factor-item">
-                                <div class="performance-pill pill-tier3" style="min-width: 60px; text-align: center;">PILLAR 3</div>
-                                <div>
-                                    <strong style="color: var(--text-primary);">Proprietary Data Flywheels</strong>
-                                    <p style="font-size: 0.84rem; color: var(--text-secondary); margin-top: 0.25rem;">
-                                        Capitalizing on massive enterprise context (e.g., Bloomberg terminals, Palantir ontologies, ServiceNow IT tickets) to train specialized domain foundation models.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="predictive-metrics-panel">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.75rem; color: var(--text-primary);">Structural Transformation Pillars</h3>
+                    <ul class="factor-list">
+                        <li class="factor-item">
+                            <span class="performance-pill pill-tier1">PILLAR 1</span>
+                            <div>
+                                <strong style="color: var(--text-primary); font-size: 0.92rem;">Compute Autonomy & Custom ASICs</strong>
+                                <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.2rem; font-weight: 300;">
+                                    Transitioning from vendor cloud dependency to internal chip architecture (e.g., Google TPU v6, Meta MTIA v3, AWS Trainium2, Microsoft Maia 200) to lower cost per token by 40–60%.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="factor-item">
+                            <span class="performance-pill pill-tier2">PILLAR 2</span>
+                            <div>
+                                <strong style="color: var(--text-primary); font-size: 0.92rem;">Agentic Workflow Automation</strong>
+                                <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.2rem; font-weight: 300;">
+                                    Replacing rule-based deterministic software with autonomous multi-agent systems capable of long-horizon planning, code execution, and customer case resolution.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="factor-item">
+                            <span class="performance-pill pill-tier3">PILLAR 3</span>
+                            <div>
+                                <strong style="color: var(--text-primary); font-size: 0.92rem;">Proprietary Data Flywheels</strong>
+                                <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.2rem; font-weight: 300;">
+                                    Capitalizing on massive enterprise context (e.g., Bloomberg terminals, Palantir ontologies, ServiceNow IT tickets) to train specialized domain foundation models.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <!-- Custom Silicon & Sovereign Compute Capacity Matrix -->
-        <section id="compute-section" class="content-block-wrapper">
-            <div class="dashboard-container">
-                <div class="section-header-block">
-                    <div>
-                        <h2 class="section-title">Custom Silicon & Compute Capacity Matrix</h2>
-                        <p class="section-subtitle">Verified peak GPU cluster footprints, proprietary ASIC accelerators, and fab foundry dependencies.</p>
-                    </div>
+        <section id="compute-section" class="content-section">
+            <div class="section-header-block">
+                <div>
+                    <h2 class="section-title-text">Custom Silicon & Compute Capacity Matrix</h2>
+                    <p class="section-subtitle-text">Verified peak GPU cluster footprints, proprietary ASIC accelerators, and fab foundry dependencies.</p>
                 </div>
+            </div>
 
-                <div class="table-responsive-wrapper">
-                    <table class="data-matrix-table">
-                        <thead>
-                            <tr>
-                                <th>Corporation</th>
-                                <th>Custom ASIC / Accelerator</th>
-                                <th>Estimated GPU/NPU Footprint</th>
-                                <th>Primary Chip Foundry Node</th>
-                                <th>Key Compute Strategy & Alignment</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style="font-weight:700; color:var(--text-primary);">Alphabet / Google</td>
-                                <td>TPU v5p / Trillium v6</td>
-                                <td>~600,000+ TPU/GPU cluster units</td>
-                                <td>TSMC 3nm / 4nm</td>
-                                <td><span class="performance-pill pill-tier1">Internal Supremacy</span> — Gemini 1.5/2.0 native execution</td>
-                            </tr>
-                            <tr>
-                                <td style="font-weight:700; color:var(--text-primary);">Meta Platforms</td>
-                                <td>MTIA v2 (Meta Training Accelerator)</td>
-                                <td>~600,000+ H100 Equivalent GPUs</td>
-                                <td>TSMC 5nm / 3nm</td>
-                                <td><span class="performance-pill pill-tier1">Open Infrastructure</span> — Llama 3 405B clusters</td>
-                            </tr>
-                            <tr>
-                                <td style="font-weight:700; color:var(--text-primary);">Microsoft</td>
-                                <td>Azure Maia 100 / Cobalt 100</td>
-                                <td>~500,000+ Azure GPU Nodes</td>
-                                <td>TSMC 5nm Process</td>
-                                <td><span class="performance-pill pill-tier2">Hyperscale Cloud</span> — Copilot + OpenAI Stargate Partnership</td>
-                            </tr>
-                            <tr>
-                                <td style="font-weight:700; color:var(--text-primary);">Amazon / AWS</td>
-                                <td>Trainium2 / Inferentia2</td>
-                                <td>~450,000+ Custom Nodes</td>
-                                <td>TSMC 5nm Node</td>
-                                <td><span class="performance-pill pill-tier2">Cost Optimization</span> — Bedrock & Anthropic cluster host</td>
-                            </tr>
-                            <tr>
-                                <td style="font-weight:700; color:var(--text-primary);">Tesla</td>
-                                <td>Dojo D1 / HW4 FSD NPU</td>
-                                <td>~100,000+ H100 / Dojo Clusters</td>
-                                <td>TSMC / Samsung GAA</td>
-                                <td><span class="performance-pill pill-tier1">Physical AI</span> — End-to-end vision neural nets & Optimus</td>
-                            </tr>
-                            <tr>
-                                <td style="font-weight:700; color:var(--text-primary);">Apple</td>
-                                <td>M4 Ultra / A18 Pro NPU (38 TOPS)</td>
-                                <td>Private Cloud Compute Apple Silicon</td>
-                                <td>TSMC 3nm N3E Node</td>
-                                <td><span class="performance-pill pill-tier3">On-Device Edge</span> — Apple Intelligence & Privacy Cloud</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <div class="table-responsive-wrapper">
+                <table class="data-matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Corporation</th>
+                            <th>Custom ASIC / Accelerator</th>
+                            <th>Estimated GPU/NPU Footprint</th>
+                            <th>Primary Chip Foundry Node</th>
+                            <th>Key Compute Strategy & Alignment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight:600; color:var(--text-primary);">Alphabet / Google</td>
+                            <td>TPU v5p / Trillium v6</td>
+                            <td>~600,000+ TPU/GPU cluster units</td>
+                            <td>TSMC 3nm / 4nm</td>
+                            <td><span class="performance-pill pill-tier1">Internal Supremacy</span> — Gemini 2.5 / 2.0 Ultra native execution</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:600; color:var(--text-primary);">Meta Platforms</td>
+                            <td>MTIA v2 / v3 ASIC</td>
+                            <td>~600,000+ H100 Equivalent GPUs</td>
+                            <td>TSMC 5nm / 3nm</td>
+                            <td><span class="performance-pill pill-tier1">Open Infrastructure</span> — Llama 3.3 / Llama 4 clusters</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:600; color:var(--text-primary);">Microsoft</td>
+                            <td>Azure Maia 100 / Maia 200</td>
+                            <td>~500,000+ Azure GPU Nodes</td>
+                            <td>TSMC 5nm / 3nm</td>
+                            <td><span class="performance-pill pill-tier2">Hyperscale Cloud</span> — Copilot + OpenAI Stargate Partnership</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:600; color:var(--text-primary);">Amazon / AWS</td>
+                            <td>Trainium2 / Inferentia3</td>
+                            <td>~450,000+ Custom Nodes</td>
+                            <td>TSMC 5nm / 3nm Node</td>
+                            <td><span class="performance-pill pill-tier2">Cost Optimization</span> — Bedrock & Anthropic cluster host</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:600; color:var(--text-primary);">Tesla</td>
+                            <td>Dojo D1 / HW4 FSD NPU</td>
+                            <td>~100,000+ H100 / Dojo Clusters</td>
+                            <td>TSMC / Samsung GAA</td>
+                            <td><span class="performance-pill pill-tier1">Physical AI</span> — FSD v13 vision neural nets & Optimus</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:600; color:var(--text-primary);">Apple</td>
+                            <td>M5 Ultra / A19 Pro NPU (50+ TOPS)</td>
+                            <td>Private Cloud Compute Apple Silicon</td>
+                            <td>TSMC 3nm N3E Node</td>
+                            <td><span class="performance-pill pill-tier3">On-Device Edge</span> — Apple Intelligence & Privacy Cloud</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <!-- Exhaustive Grid of AI-First Enterprise Profiles -->
-        <section id="cards-section" class="content-block-wrapper bg-alt-block">
-            <div class="dashboard-container">
-                <div class="section-header-block">
-                    <div>
-                        <h2 class="section-title">Deep Corporate Profiles & Strategy Index</h2>
-                        <p class="section-subtitle">Detailed architectural breakdown of the global top 50 AI-First corporations.</p>
-                    </div>
+        <section id="cards-section" class="content-section">
+            <div class="section-header-block">
+                <div>
+                    <h2 class="section-title-text">Corporate Profiles & Strategy Index</h2>
+                    <p class="section-subtitle-text">Architectural breakdown of the global top 50 AI-First corporations.</p>
                 </div>
+            </div>
 
-                <div class="premium-grid-matrix" id="corporation-cards-container">
-                    <!-- Populated dynamically by JS -->
-                </div>
+            <div class="premium-grid-matrix" id="corporation-cards-container">
+                <!-- Populated dynamically by JS -->
             </div>
         </section>
 
         <!-- Peer-Reviewed Research & Benchmarks Section -->
-        <section id="citations-section" class="content-block-wrapper">
-            <div class="dashboard-container">
-                <div class="section-header-block">
+        <section id="citations-section" class="content-section">
+            <div class="section-header-block">
+                <div>
+                    <h2 class="section-title-text">Academic Citations & Technical Literature</h2>
+                    <p class="section-subtitle-text">Peer-reviewed research literature, architectural whitepapers, and scaling laws driving enterprise AI transformation.</p>
+                </div>
+            </div>
+
+            <div class="citations-layout-grid">
+                <div class="citation-paper-card">
                     <div>
-                        <h2 class="section-title">Academic Citations & Industry Benchmarks</h2>
-                        <p class="section-subtitle">Verified research literature, architectural papers, and scaling laws driving enterprise AI transformation.</p>
+                        <div class="citation-card-header">
+                            <span class="doi-tag">arXiv:2412.08905</span>
+                            <span class="performance-pill pill-tier1">Google DeepMind</span>
+                        </div>
+                        <h3 class="paper-title">Gemini 2.0: Multimodal Reasoning & Agentic Execution at Scale</h3>
+                        <p class="paper-authors">Google DeepMind Research Team</p>
+                        <p class="paper-abstract">Details sparse Mixture-of-Experts (MoE) optimizations and native real-time audio/video processing capabilities. Demonstrates million-token reasoning recall across complex codebases and agentic workflows.</p>
+                    </div>
+                    <div class="paper-footer">
+                        <span>Multimodal Intelligence</span>
+                        <a href="https://arxiv.org/abs/2412.08905" target="_blank" rel="noopener noreferrer" style="color:var(--text-primary);">Read Paper &rarr;</a>
                     </div>
                 </div>
 
-                <div class="citations-layout-grid">
-                    <div class="citation-paper-card">
-                        <span class="doi-tag">arXiv:2403.05530</span>
-                        <h3 class="paper-title">Gemini 1.5: Unlocking Very Long Context Capabilities Across Modalities</h3>
-                        <p class="paper-authors">Google DeepMind Team (M. Reid, N. Savinov, et al.)</p>
-                        <p class="paper-abstract">Demonstrates million-token context window scaling enabled by Transformer architecture optimizations. Details sparse Mixture-of-Experts (MoE) design yielding near-perfect recall across 1M+ token audio, video, and code contexts.</p>
-                        <div class="paper-footer">
-                            <span>Domain: Multi-Modal Scaling</span>
-                            <a href="https://arxiv.org/abs/2403.05530" target="_blank" rel="noopener noreferrer" class="hyperlink-verified">Read Paper &rarr;</a>
+                <div class="citation-paper-card">
+                    <div>
+                        <div class="citation-card-header">
+                            <span class="doi-tag">arXiv:2407.21783</span>
+                            <span class="performance-pill pill-tier1">Meta AI</span>
                         </div>
-                    </div>
-
-                    <div class="citation-paper-card">
-                        <span class="doi-tag">arXiv:2407.21783</span>
                         <h3 class="paper-title">The Llama 3 Herd of Models: Open Frontier Foundations</h3>
-                        <p class="paper-authors">Meta AI Team (A. Grattafiori, S. Touvron, et al.)</p>
-                        <p class="paper-abstract">Details the training methodology of Llama 3.1 405B across 16,000 H100 GPUs. Establishes open-weight parity with top proprietary models in coding, reasoning, and multi-lingual translation.</p>
-                        <div class="paper-footer">
-                            <span>Domain: Open-Weight Foundation Models</span>
-                            <a href="https://arxiv.org/abs/2407.21783" target="_blank" rel="noopener noreferrer" class="hyperlink-verified">Read Paper &rarr;</a>
-                        </div>
+                        <p class="paper-authors">Meta AI Research Team (A. Grattafiori et al.)</p>
+                        <p class="paper-abstract">Details the training methodology of Llama 3.1 / 3.3 405B across 16,000+ H100 GPUs. Establishes open-weight parity with top proprietary models in coding, reasoning, and multi-lingual translation.</p>
                     </div>
-
-                    <div class="citation-paper-card">
-                        <span class="doi-tag">arXiv:2312.11805</span>
-                        <h3 class="paper-title">DeepSeek-MoE: Towards Ultimate Expert Specialization in Foundation Models</h3>
-                        <p class="paper-authors">DeepSeek-AI Team (D. Dai, C. Deng, et al.)</p>
-                        <p class="paper-abstract">Introduces fine-grained expert segmentation and shared expert isolation, drastically lowering training and inference FLOPs while setting benchmarking records for open-source AI efficiency.</p>
-                        <div class="paper-footer">
-                            <span>Domain: Mixture-of-Experts Architecture</span>
-                            <a href="https://arxiv.org/abs/2312.11805" target="_blank" rel="noopener noreferrer" class="hyperlink-verified">Read Paper &rarr;</a>
-                        </div>
+                    <div class="paper-footer">
+                        <span>Open-Weight Foundations</span>
+                        <a href="https://arxiv.org/abs/2407.21783" target="_blank" rel="noopener noreferrer" style="color:var(--text-primary);">Read Paper &rarr;</a>
                     </div>
+                </div>
 
-                    <div class="citation-paper-card">
-                        <span class="doi-tag">arXiv:2310.06825</span>
-                        <h3 class="paper-title">Mistral 7B & Mixtral of Experts: High-Efficiency Enterprise Inference</h3>
+                <div class="citation-paper-card">
+                    <div>
+                        <div class="citation-card-header">
+                            <span class="doi-tag">arXiv:2412.19437</span>
+                            <span class="performance-pill pill-tier1">DeepSeek AI</span>
+                        </div>
+                        <h3 class="paper-title">DeepSeek-V3 Technical Report & MoE Reasoning Architectures</h3>
+                        <p class="paper-authors">DeepSeek-AI Team (D. Dai et al.)</p>
+                        <p class="paper-abstract">Introduces Multi-Head Latent Attention (MLA) and fine-grained expert segmentation, drastically reducing training and inference FLOPs while establishing state-of-the-art open-source reasoning benchmarks.</p>
+                    </div>
+                    <div class="paper-footer">
+                        <span>MoE Efficiency</span>
+                        <a href="https://arxiv.org/abs/2412.19437" target="_blank" rel="noopener noreferrer" style="color:var(--text-primary);">Read Paper &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="citation-paper-card">
+                    <div>
+                        <div class="citation-card-header">
+                            <span class="doi-tag">arXiv:2401.04088</span>
+                            <span class="performance-pill pill-tier2">Mistral AI</span>
+                        </div>
+                        <h3 class="paper-title">Mixtral of Experts: High-Efficiency Enterprise Inference</h3>
                         <p class="paper-authors">Mistral AI Team (A. Mensch, G. Lample, et al.)</p>
-                        <p class="paper-abstract">Pioneers grouped-query attention (GQA) and sliding window attention for memory-efficient enterprise deployment, outperforming larger parameter dense models on standard logical benchmarks.</p>
-                        <div class="paper-footer">
-                            <span>Domain: Enterprise On-Prem Inference</span>
-                            <a href="https://arxiv.org/abs/2310.06825" target="_blank" rel="noopener noreferrer" class="hyperlink-verified">Read Paper &rarr;</a>
-                        </div>
+                        <p class="paper-abstract">Pioneers grouped-query attention (GQA) and sliding window attention for memory-efficient enterprise deployment, outperforming larger dense models on standard logical and coding benchmarks.</p>
+                    </div>
+                    <div class="paper-footer">
+                        <span>Enterprise Inference</span>
+                        <a href="https://arxiv.org/abs/2401.04088" target="_blank" rel="noopener noreferrer" style="color:var(--text-primary);">Read Paper &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -1168,9 +1212,8 @@
     <footer class="footer-root">
         <div class="footer-container">
             <div class="footer-brand-column">
-                <h3>Monolith Labs</h3>
-                <p>Monolith Labs is an independent technical research institution monitoring enterprise AI-First transitions, sovereign compute nodes, and foundation model economics.</p>
-                <p class="monolith-credit">Created by <span>Monolith Labs</span></p>
+                <h3>MONOLITH LABS.</h3>
+                <p>An independent technical research institute monitoring enterprise AI-First transitions, sovereign compute nodes, and foundation model economics.</p>
             </div>
             <div class="footer-column">
                 <h4>Observatory Modules</h4>
@@ -1184,17 +1227,17 @@
             <div class="footer-column">
                 <h4>Data Assets</h4>
                 <ul class="footer-links-list">
-                    <li><a href="#" id="footer-csv-trigger">Export Full Dataset (CSV)</a></li>
+                    <li><a href="#" id="footer-csv-trigger">Export Dataset (CSV)</a></li>
                     <li><a href="https://monolithlabz.github.io/ai-first-corporation.html">Canonical Observatory</a></li>
-                    <li><a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">arXiv AI Repository</a></li>
+                    <li><a href="https://monolithlabz.github.io/methodology.html">Research Methodology</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <h4>Foundational Papers</h4>
+                <h4>Technical Papers</h4>
                 <ul class="footer-links-list">
-                    <li><a href="https://arxiv.org/abs/2403.05530" target="_blank" rel="noopener noreferrer">Google Gemini 1.5</a></li>
-                    <li><a href="https://arxiv.org/abs/2407.21783" target="_blank" rel="noopener noreferrer">Meta Llama 3.1</a></li>
-                    <li><a href="https://arxiv.org/abs/2312.11805" target="_blank" rel="noopener noreferrer">DeepSeek MoE</a></li>
+                    <li><a href="https://arxiv.org/abs/2412.08905" target="_blank" rel="noopener noreferrer">Google Gemini 2.0</a></li>
+                    <li><a href="https://arxiv.org/abs/2407.21783" target="_blank" rel="noopener noreferrer">Meta Llama 3 Herd</a></li>
+                    <li><a href="https://arxiv.org/abs/2412.19437" target="_blank" rel="noopener noreferrer">DeepSeek-V3 MoE</a></li>
                 </ul>
             </div>
         </div>
@@ -1225,10 +1268,10 @@
                 category: "Hyperscale & Frontier AI",
                 pivotYear: "2016",
                 score: 99,
-                stack: "Gemini 1.5/2.0, DeepMind, Search AI Overviews, Waymo",
-                compute: "TPU v5p / Trillium, 600k+ Cluster Nodes",
+                stack: "Gemini 2.5/2.0 Ultra, DeepMind, Search AI Overviews, Waymo",
+                compute: "TPU v5p / Trillium v6, 600k+ Cluster Nodes",
                 link: "https://ai.google",
-                desc: "Declared 'AI-First' by Sundar Pichai in 2016. Fully vertically integrated across TPU custom silicon, DeepMind frontier research, Waymo autonomous fleet, and Gemini infrastructure."
+                desc: "Declared 'AI-First' by Sundar Pichai in 2016. Vertically integrated across TPU v6 custom silicon, DeepMind frontier reasoning models, Waymo autonomous fleets, and Gemini search infrastructure."
             },
             {
                 rank: 2,
@@ -1237,8 +1280,8 @@
                 category: "Hyperscale & Frontier AI",
                 pivotYear: "2019",
                 score: 98,
-                stack: "Azure OpenAI Service, Copilot System, Phi-3, Inflection",
-                compute: "Azure Maia 100, 500k+ NVIDIA H100/H200 Nodes",
+                stack: "Azure OpenAI Service, Copilot Studio Agents, Phi-4, Inflection",
+                compute: "Azure Maia 100 / Maia 200, 500k+ NVIDIA H100/H200 Nodes",
                 link: "https://microsoft.com/ai",
                 desc: "Pioneered commercial GenAI adoption via multi-billion dollar OpenAI partnership. Embedded Copilot into Windows, Office, and GitHub while deploying custom Azure Maia silicon."
             },
@@ -1250,7 +1293,7 @@
                 pivotYear: "2012",
                 score: 98,
                 stack: "CUDA Platform, NIM Microservices, DGX Cloud, Omniverse",
-                compute: "Blackwell B200, H100/H200, NVLink Switches",
+                compute: "Blackwell B200 / Rubin Ultra, NVLink 5 Switches",
                 link: "https://nvidia.com",
                 desc: "The foundational compute engine of the AI revolution. Transformed from gaming GPU manufacturer to full-stack AI platform providing chips, interconnects, CUDA ecosystem, and NIM software."
             },
@@ -1261,8 +1304,8 @@
                 category: "Hyperscale & Frontier AI",
                 pivotYear: "2013",
                 score: 96,
-                stack: "Llama 3.1 405B, FAIR Lab, Meta AI Agent, Advantage+ AI",
-                compute: "MTIA v2 ASIC, 600k+ H100 GPU Clusters",
+                stack: "Llama 3.3 / Llama 4, FAIR Lab, Meta AI Agent, Advantage+ AI",
+                compute: "MTIA v2/v3 ASIC, 600k+ H100 GPU Clusters",
                 link: "https://ai.meta.com",
                 desc: "Champions open-weight AI leadership via Llama models while running FAIR research and deploying custom MTIA chips across 3.2B user recommendation systems."
             },
@@ -1273,10 +1316,10 @@
                 category: "Hyperscale & Frontier AI",
                 pivotYear: "2015",
                 score: 96,
-                stack: "GPT-4o, o1 Reasoning, Sora Video, ChatGPT Enterprise",
+                stack: "GPT-4.5, o3 Reasoning, Sora v2, ChatGPT Enterprise",
                 compute: "Microsoft Azure Supercomputers, Stargate Initiative",
                 link: "https://openai.com",
-                desc: "Frontier lab that ignited the modern generative AI era with ChatGPT. Pioneering reasoning capabilities (o1) and multimodal intelligence."
+                desc: "Frontier lab that ignited the modern generative AI era with ChatGPT. Pioneering advanced reasoning capabilities (o3) and multimodal video synthesis."
             },
             {
                 rank: 6,
@@ -1285,7 +1328,7 @@
                 category: "Hyperscale & Frontier AI",
                 pivotYear: "2021",
                 score: 94,
-                stack: "Claude 3.5 Sonnet, Computer Use, Constitutional AI",
+                stack: "Claude 3.7 Sonnet / Claude 4, Computer Use v2, Constitutional AI",
                 compute: "AWS Trainium & GCP TPU Clusters",
                 link: "https://anthropic.com",
                 desc: "Leading safety-focused frontier lab. Breakthroughs in model steering, long-context analysis, and direct 'Computer Use' agentic execution."
@@ -1298,7 +1341,7 @@
                 pivotYear: "2017",
                 score: 93,
                 stack: "AWS Bedrock, Rufus E-Commerce Agent, Amazon Q",
-                compute: "Trainium2, Inferentia2, Graviton4 ASICs",
+                compute: "Trainium2, Inferentia3, Graviton4 ASICs",
                 link: "https://aws.amazon.com/ai",
                 desc: "Hyperscale cloud backend empowering multi-model enterprise choices via Bedrock while training custom Trainium silicon."
             },
@@ -1309,8 +1352,8 @@
                 category: "Autonomous Platforms & Robotics",
                 pivotYear: "2016",
                 score: 92,
-                stack: "FSD v12 End-to-End Neural Nets, Optimus Humanoid Robot",
-                compute: "Dojo Supercomputer, 100k+ H100 Cluster",
+                stack: "FSD v13 End-to-End Neural Nets, Optimus Gen 3 Robot",
+                compute: "Dojo v2 Supercomputer, 100k+ H100 Cluster",
                 link: "https://tesla.com/AI",
                 desc: "Replaced millions of lines of C++ autonomous driving code with end-to-end vision neural networks. Massively scaling physical AI."
             },
@@ -1321,8 +1364,8 @@
                 category: "Hyperscale & Frontier AI",
                 pivotYear: "2017",
                 score: 91,
-                stack: "Apple Intelligence, Private Cloud Compute, MLX Framework",
-                compute: "Apple Silicon M4/A18 NPUs (38 TOPS)",
+                stack: "Apple Intelligence 2.0, Private Cloud Compute, MLX",
+                compute: "Apple Silicon M5/A19 Pro NPUs (50+ TOPS)",
                 link: "https://apple.com/apple-intelligence",
                 desc: "Pioneering hybrid edge/cloud privacy-first AI. Integrates neural engines directly into billions of consumer devices."
             },
@@ -1345,7 +1388,7 @@
                 category: "Enterprise Software & Agents",
                 pivotYear: "2020",
                 score: 89,
-                stack: "Now Assist, Enterprise Workflow Agents, Hugging Face Co-dev",
+                stack: "Now Assist Agentic Platform, Workflow Agents, Hugging Face Co-dev",
                 compute: "Domain-Specific Cloud Infrastructure",
                 link: "https://servicenow.com",
                 desc: "Infused Generative AI across global IT, HR, and customer workflows, achieving rapid enterprise monetization."
@@ -1357,7 +1400,7 @@
                 category: "Enterprise Software & Agents",
                 pivotYear: "2016",
                 score: 89,
-                stack: "Agentforce, Einstein 1 Platform, Data Cloud Integration",
+                stack: "Agentforce 2.0, Einstein 1 Platform, Data Cloud Integration",
                 compute: "Hyperforce Cloud Compute Infrastructure",
                 link: "https://salesforce.com/agentforce",
                 desc: "Pivoted CRM from passive dashboards to autonomous Agentforce agents resolving service cases independently."
@@ -1369,7 +1412,7 @@
                 category: "Enterprise Software & Agents",
                 pivotYear: "2018",
                 score: 88,
-                stack: "Firefly Generative Models, Sensei GenAI, Express",
+                stack: "Firefly Video & 3D Models, Sensei GenAI, Express",
                 compute: "Commercial High-Density GPU Training Clusters",
                 link: "https://adobe.com/firefly",
                 desc: "Transformed commercial creative suite with commercially safe Firefly models integrated across Photoshop, Premiere, and Illustrator."
@@ -1381,7 +1424,7 @@
                 category: "Enterprise Software & Agents",
                 pivotYear: "2022",
                 score: 87,
-                stack: "Cortex AI, Arctic Open LLM, Streamlit AI Integration",
+                stack: "Cortex AI, Arctic 2 Open Model, Streamlit AI",
                 compute: "Cloud Data Warehouse Accelerators",
                 link: "https://snowflake.com/cortex",
                 desc: "Brings AI directly to enterprise data repositories, allowing secure model execution without data exfiltration."
@@ -1393,7 +1436,7 @@
                 category: "Enterprise Software & Agents",
                 pivotYear: "2021",
                 score: 87,
-                stack: "MosaicML Platform, DBRX Open MoE Model, Lakehouse AI",
+                stack: "Mosaic AI, DBRX 2 Open MoE Model, Lakehouse Vector Indexing",
                 compute: "Large Scale Multi-Cloud GPU Compute Nodes",
                 link: "https://databricks.com",
                 desc: "Acquired MosaicML to enable enterprises to train proprietary foundation models on internal lakehouse data securely."
@@ -1417,7 +1460,7 @@
                 category: "Industrial & Financial Tech",
                 pivotYear: "2019",
                 score: 85,
-                stack: "Industrial Copilot, Digital Twin AI, Xcelerator",
+                stack: "Industrial Copilot, Industrial Digital Twin AI, Xcelerator",
                 compute: "Edge Industrial Supercomputing Nodes",
                 link: "https://siemens.com",
                 desc: "Partnered with Microsoft and NVIDIA to bring generative AI and real-time physical digital twins to industrial factories."
@@ -1429,7 +1472,7 @@
                 category: "Enterprise Software & Agents",
                 pivotYear: "2018",
                 score: 85,
-                stack: "Charlotte AI, Falcon Platform Native ML, SOC Automation",
+                stack: "Charlotte AI, Falcon Precision Automation, SOC Autonomous Defense",
                 compute: "CrowdStrike Cloud Threat Graph",
                 link: "https://crowdstrike.com",
                 desc: "Processes trillions of security events daily using machine learning to detect and neutralize cyber threats autonomously."
@@ -1441,10 +1484,10 @@
                 category: "Semiconductor & Custom Silicon",
                 pivotYear: "2010",
                 score: 97,
-                stack: "High-NA EUV Lithography, Computational Optics",
+                stack: "High-NA EUV Lithography (EXE:5000), Computational Optics",
                 compute: "High-Precision Lithographic Processing Engines",
                 link: "https://asml.com",
-                desc: "Monopolistic manufacturer of EUV lithography machines required to etch 3nm and 2nm AI accelerator chips globally."
+                desc: "Monopolistic manufacturer of EUV lithography machines required to etch 3nm and sub-2nm AI accelerator chips globally."
             },
             {
                 rank: 20,
@@ -1453,7 +1496,7 @@
                 category: "Semiconductor & Custom Silicon",
                 pivotYear: "2014",
                 score: 97,
-                stack: "CoWoS Advanced Packaging, 3nm/2nm GAA Foundry Nodes",
+                stack: "A16 / N2 (2nm GAA) Foundry Nodes, CoWoS-L Advanced Packaging",
                 compute: "Global Advanced Semiconductor Foundries",
                 link: "https://tsmc.com",
                 desc: "The semiconductor backbone of the AI era, manufacturing over 90% of the world's advanced AI chips for NVIDIA, Apple, AMD, and Google."
@@ -1465,7 +1508,7 @@
                 category: "Hyperscale & Frontier AI",
                 pivotYear: "2013",
                 score: 86,
-                stack: "Ernie Bot 4.0, Kunlun AI Accelerators, Apollo Autonomous",
+                stack: "Ernie Bot 4.5, Kunlun3 AI Accelerators, Apollo Autonomous Fleet",
                 compute: "Kunlun AI Silicon Clusters",
                 link: "https://baidu.com",
                 desc: "China's premier AI-First search and autonomous vehicle giant running Ernie foundation models natively."
@@ -1477,7 +1520,7 @@
                 category: "Hyperscale & Frontier AI",
                 pivotYear: "2017",
                 score: 84,
-                stack: "Hunyuan LLM, WeChat AI Services, Cloud AI Stack",
+                stack: "Hunyuan 2.0 LLM, WeChat AI Agent Framework, Cloud AI Stack",
                 compute: "Heterogeneous GPU Compute Centers",
                 link: "https://tencent.com",
                 desc: "Integrates Hunyuan foundation models across WeChat's 1.3B user platform and enterprise gaming engines."
@@ -1489,10 +1532,10 @@
                 category: "Hyperscale & Frontier AI",
                 pivotYear: "2015",
                 score: 85,
-                stack: "Qwen 2.5 Open Models, ModelScope, T-Head Yitian Chips",
+                stack: "Qwen 2.5 / Qwen 3 Open Models, ModelScope, T-Head Chips",
                 compute: "Alibaba Cloud Sovereign Clusters",
                 link: "https://alibabacloud.com",
-                desc: "Leads Asia's open-source LLM ecosystem with Qwen 2.5 models while providing hyperscale AI cloud infrastructure."
+                desc: "Leads Asia's open-source LLM ecosystem with Qwen series models while providing hyperscale AI cloud infrastructure."
             },
             {
                 rank: 24,
@@ -1513,7 +1556,7 @@
                 category: "Hyperscale & Frontier AI",
                 pivotYear: "2023",
                 score: 93,
-                stack: "DeepSeek-V2/V3/R1 MoE Models, Multi-Head Latent Attention",
+                stack: "DeepSeek-V3 / DeepSeek-R1 MoE Models, Multi-Head Latent Attention",
                 compute: "High-Efficiency GPU Training Architectures",
                 link: "https://deepseek.com",
                 desc: "Shocked global AI benchmarks by training state-of-the-art MoE reasoning models at a fraction of standard hyperscaler costs."
@@ -1525,7 +1568,7 @@
                 category: "Hyperscale & Frontier AI",
                 pivotYear: "2023",
                 score: 91,
-                stack: "Mistral Large 2, Codestral, Pixtral, Mixtral 8x22B",
+                stack: "Mistral Large 2, Codestral 2, Pixtral, Mixtral MoE Series",
                 compute: "European Sovereign GPU Data Centers",
                 link: "https://mistral.ai",
                 desc: "Europe's leading AI pioneer driving open-weight foundation models optimized for extreme speed and on-prem enterprise safety."
@@ -1537,7 +1580,7 @@
                 category: "Enterprise Software & Agents",
                 pivotYear: "2019",
                 score: 89,
-                stack: "Command R+, Embed 3, RAG Systems, Multi-Cloud AI",
+                stack: "Command R7+, Embed 3, Enterprise RAG, Multi-Cloud AI",
                 compute: "Agnostic Cloud Partner Infra",
                 link: "https://cohere.com",
                 desc: "Focuses exclusively on enterprise LLMs, RAG search pipelines, and privacy-preserved multi-cloud deployments."
@@ -1549,7 +1592,7 @@
                 category: "Enterprise Software & Agents",
                 pivotYear: "2016",
                 score: 88,
-                stack: "Data Engine, SEAL Benchmarks, Defense AI Platform",
+                stack: "SEAL Benchmarks, RLHF Data Engine, Defense AI Platform",
                 compute: "Distributed RLHF Human-in-the-Loop Network",
                 link: "https://scale.com",
                 desc: "Provides essential fine-tuning, RLHF data annotation, and benchmarking infrastructure for leading frontier labs."
@@ -1561,7 +1604,7 @@
                 category: "Enterprise Software & Agents",
                 pivotYear: "2019",
                 score: 80,
-                stack: "C3 Generative AI Suite, Enterprise Predictive Engine",
+                stack: "C3 Generative AI Suite 2.0, Enterprise Predictive Engine",
                 compute: "Multi-Cloud Industrial Connectors",
                 link: "https://c3.ai",
                 desc: "Pure-play enterprise AI application software provider optimizing industrial predictive maintenance and supply chains."
@@ -1585,7 +1628,7 @@
                 category: "Industrial & Financial Tech",
                 pivotYear: "2018",
                 score: 86,
-                stack: "BloombergGPT, Terminal Financial ML Models, Sentiment Engine",
+                stack: "BloombergGPT 2, Terminal Financial ML Models, Sentiment Engine",
                 compute: "Bloomberg Private Data Infrastructure",
                 link: "https://bloomberg.com",
                 desc: "Pioneered financial domain LLMs by training BloombergGPT on decades of proprietary financial data."
@@ -1597,7 +1640,7 @@
                 category: "Enterprise Software & Agents",
                 pivotYear: "2011",
                 score: 83,
-                stack: "watsonx Platform, Granite Open LLMs, Red Hat AI",
+                stack: "watsonx Platform, Granite 3.0 Open LLMs, Red Hat AI",
                 compute: "IBM Cloud & Quantum-AI Hybrid Infra",
                 link: "https://ibm.com/watsonx",
                 desc: "Pivoted enterprise AI with watsonx, giving corporations fully governance-compliant Granite open foundation models."
@@ -1609,7 +1652,7 @@
                 category: "Enterprise Software & Agents",
                 pivotYear: "2020",
                 score: 88,
-                stack: "OCI GPU Superclusters, HeatWave GenAI, Database Vector Search",
+                stack: "OCI GPU Superclusters, Database 23ai Vector Search",
                 compute: "Oracle Cloud Infrastructure (OCI) Superclusters",
                 link: "https://oracle.com/ai",
                 desc: "Became a preferred cloud host for OpenAI and xAI by providing dense bare-metal GPU superclusters."
@@ -1621,10 +1664,10 @@
                 category: "Semiconductor & Custom Silicon",
                 pivotYear: "2017",
                 score: 90,
-                stack: "Instinct MI300X/MI325X, ROCm 6 Open Software, Ryzen AI NPU",
-                compute: "TSMC 5nm/6nm Advanced Packaging Nodes",
+                stack: "Instinct MI325X/MI350X, ROCm 6.2 Open Software, Ryzen AI 300",
+                compute: "TSMC 5nm/3nm Advanced Packaging Nodes",
                 link: "https://amd.com/ai",
-                desc: "NVIDIA's chief competitor in data center GPUs, offering memory-dense MI300X accelerators and open ROCm software."
+                desc: "NVIDIA's chief competitor in data center GPUs, offering memory-dense MI325X accelerators and open ROCm software."
             },
             {
                 rank: 35,
@@ -1633,7 +1676,7 @@
                 category: "Semiconductor & Custom Silicon",
                 pivotYear: "2017",
                 score: 80,
-                stack: "Gaudi 3 AI Accelerator, Lunar Lake NPU, Xeon AI Extensions",
+                stack: "Gaudi 3 AI Accelerator, Lunar Lake NPU, Xeon 6 AI Extensions",
                 compute: "Intel Foundry Services & TSMC External Nodes",
                 link: "https://intel.com/ai",
                 desc: "Deploying Gaudi 3 accelerators for enterprise value while integrating client NPUs across PC hardware."
@@ -1645,7 +1688,7 @@
                 category: "Semiconductor & Custom Silicon",
                 pivotYear: "2018",
                 score: 87,
-                stack: "Snapdragon X Elite NPU (45 TOPS), Hexagon Processor",
+                stack: "Snapdragon X Elite 2 NPU (50+ TOPS), Hexagon Processor",
                 compute: "Low-Power Mobile & PC Silicon",
                 link: "https://qualcomm.com/ai",
                 desc: "Dominating on-device generative AI execution for smartphones and new Copilot+ Windows PCs."
@@ -1657,7 +1700,7 @@
                 category: "Semiconductor & Custom Silicon",
                 pivotYear: "2019",
                 score: 91,
-                stack: "Custom AI ASIC Accelerators, Tomahawk 5 Networking",
+                stack: "Custom AI ASIC Accelerators, Tomahawk 6 Networking",
                 compute: "Custom Silicon Co-design Facilities",
                 link: "https://broadcom.com",
                 desc: "Co-designs custom TPU/MTIA AI silicon for Google and Meta while dominating ultra-fast data center networking."
@@ -1681,7 +1724,7 @@
                 category: "Semiconductor & Custom Silicon",
                 pivotYear: "2020",
                 score: 86,
-                stack: "EOS AI Leaf-Spine Switches, Etherlink AI Networking",
+                stack: "800G Etherlink AI Switches, EOS AI Leaf-Spine Architecture",
                 compute: "High-Throughput Ethernet Fabrics",
                 link: "https://arista.com",
                 desc: "Supplies the Ultra Ethernet Switches connecting thousands of GPUs together in massive AI training clusters."
@@ -1693,7 +1736,7 @@
                 category: "Semiconductor & Custom Silicon",
                 pivotYear: "2021",
                 score: 87,
-                stack: "HBM3e (High Bandwidth Memory), LPDDR5X DRAM",
+                stack: "HBM3e 12-High Memory, LPDDR5X DRAM",
                 compute: "Advanced Memory Fabrication Facilities",
                 link: "https://micron.com",
                 desc: "Manufactures ultra-fast HBM3e memory chips integrated directly into NVIDIA Blackwell GPUs."
@@ -1717,7 +1760,7 @@
                 category: "Semiconductor & Custom Silicon",
                 pivotYear: "2017",
                 score: 85,
-                stack: "Exynos NPU, HBM3e Memory, Galaxy AI Suite",
+                stack: "Exynos NPU, HBM3e/HBM4 Memory, Galaxy AI Suite",
                 compute: "Sovereign Memory & Logic Foundries",
                 link: "https://samsung.com",
                 desc: "Vertically integrated memory, foundry, and consumer device titan rolling out Galaxy AI across mobile ecosystems."
@@ -1729,7 +1772,7 @@
                 category: "Industrial & Financial Tech",
                 pivotYear: "2021",
                 score: 81,
-                stack: "Splunk AI Security, Silicon One Routing, AI Defense Engine",
+                stack: "Splunk AI Security Engine, Silicon One Routing",
                 compute: "Global Enterprise Switches",
                 link: "https://cisco.com",
                 desc: "Acquired Splunk to secure enterprise networks using autonomous threat detection AI models."
@@ -1801,7 +1844,7 @@
                 category: "Hyperscale & Frontier AI",
                 pivotYear: "2022",
                 score: 89,
-                stack: "Midjourney v6, Visual Synthesis Models, Aesthetic AI",
+                stack: "Midjourney v6.1 / v7, Visual Synthesis Models, Aesthetic AI",
                 compute: "Dense Third-Party GPU Superclusters",
                 link: "https://midjourney.com",
                 desc: "Self-funded pure-play research lab defining state-of-the-art generative image synthesis and aesthetic control."
@@ -1813,7 +1856,7 @@
                 category: "Hyperscale & Frontier AI",
                 pivotYear: "2022",
                 score: 90,
-                stack: "Conversational Search Engine, Pro Discovery, Enterprise Agents",
+                stack: "Conversational Citation Engine, Pro Discovery, Enterprise Agents",
                 compute: "Multi-Model Inference Superclusters",
                 link: "https://perplexity.ai",
                 desc: "Reimagined web search via conversational citation engines and real-time enterprise research agents."
@@ -1825,36 +1868,6 @@
         const corporationCardsContainer = document.getElementById('corporation-cards-container');
         const registrySearch = document.getElementById('registry-search');
         const categoryFilter = document.getElementById('category-filter');
-        const themeToggler = document.getElementById('theme-toggler');
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        const navMenu = document.getElementById('nav-menu');
-        const rootElement = document.documentElement;
-
-        // Navigation Controller
-        hamburgerBtn.addEventListener('click', () => {
-            hamburgerBtn.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburgerBtn.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Theme Initialization
-        function initializeThemeSystem() {
-            const preservedTheme = safeStorage.getItem('monolith-ai-theme') || 'light';
-            rootElement.setAttribute('data-theme', preservedTheme);
-            
-            themeToggler.addEventListener('click', () => {
-                const currentTheme = rootElement.getAttribute('data-theme');
-                const targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                rootElement.setAttribute('data-theme', targetTheme);
-                safeStorage.setItem('monolith-ai-theme', targetTheme);
-            });
-        }
 
         // Score Badge Resolver
         function getScoreClass(score) {
@@ -1890,15 +1903,15 @@
                 const tableRow = document.createElement('tr');
                 tableRow.innerHTML = `
                     <td><span class="rank-badge">${item.rank}</span></td>
-                    <td style="font-weight:700; color:var(--text-primary);">
+                    <td style="font-weight:600; color:var(--text-primary);">
                         ${item.name} <span class="ticker-symbol">${item.ticker}</span>
                     </td>
                     <td><span class="pill-category">${item.category}</span></td>
-                    <td style="font-family:var(--font-code);">${item.pivotYear}</td>
-                    <td style="font-size:0.84rem;">${item.stack}</td>
-                    <td style="font-size:0.84rem;">${item.compute}</td>
+                    <td style="font-family:var(--mono-font);">${item.pivotYear}</td>
+                    <td style="font-size:0.82rem;">${item.stack}</td>
+                    <td style="font-size:0.82rem;">${item.compute}</td>
                     <td><span class="performance-pill ${scorePillClass}">${item.score} / 100</span></td>
-                    <td><a href="${item.link}" target="_blank" rel="noopener noreferrer" class="hyperlink-verified">Portal &rarr;</a></td>
+                    <td><a href="${item.link}" target="_blank" rel="noopener noreferrer" style="color:var(--text-primary); font-family:var(--mono-font); font-size:0.78rem;">Portal &rarr;</a></td>
                 `;
                 registryTableBody.appendChild(tableRow);
 
@@ -1907,9 +1920,9 @@
                 cardNode.className = 'premium-card-node';
                 cardNode.innerHTML = `
                     <div>
-                        <div class="premium-card-header">
-                            <div>
-                                <span class="premium-card-title">${item.name}</span>
+                        <div class="card-header-top">
+                            <div class="card-title-text">
+                                ${item.name}
                                 <span class="ticker-symbol">${item.ticker}</span>
                             </div>
                             <span class="performance-pill ${scorePillClass}">Rank #${item.rank}</span>
@@ -1927,13 +1940,13 @@
                             <div class="meta-field-label">Compute Infrastructure & Silicon</div>
                             <p class="meta-field-desc">${item.compute}</p>
                         </div>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; border-top: 1px dashed var(--border-color); padding-top: 0.75rem;">
+                        <p style="font-size: 0.84rem; color: var(--text-secondary); margin-top: 0.85rem; border-top: 1px dashed var(--border); padding-top: 0.75rem; font-weight: 300;">
                             ${item.desc}
                         </p>
                     </div>
-                    <div style="margin-top: 1.25rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
-                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--text-muted);">AI FIRST SCORE: ${item.score}/100</span>
-                        <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="hyperlink-verified">Official Site &rarr;</a>
+                    <div style="margin-top: 1.25rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 0.75rem;">
+                        <span style="font-size: 0.72rem; font-weight: 600; color: var(--text-tertiary); font-family: var(--mono-font);">SCORE: ${item.score}/100</span>
+                        <a href="${item.link}" target="_blank" rel="noopener noreferrer" style="color:var(--text-primary); font-family:var(--mono-font); font-size:0.78rem;">Official Site &rarr;</a>
                     </div>
                 `;
                 corporationCardsContainer.appendChild(cardNode);
@@ -1968,30 +1981,35 @@
             downloadCSVDataset();
         });
 
-        // Scrollspy for Header Navigation
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-link');
-            let currentSection = '';
+        // Theme Icon Renderer
+        function updateThemeIcon(theme) {
+            const icon = document.getElementById('themeIcon');
+            if (!icon) return;
+            if (theme === 'light') {
+                icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+            } else {
+                icon.innerHTML = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+            }
+        }
 
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (window.scrollY >= (sectionTop - 220)) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').includes(currentSection)) {
-                    link.classList.add('active');
-                }
-            });
-        });
+        // Toggle Theme Function
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme') || 'dark';
+            const next = current === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', next);
+            try { localStorage.setItem('monolith-theme', next); } catch (e) {}
+            updateThemeIcon(next);
+        }
 
         // Entry Initialization
-        initializeThemeSystem();
-        renderCorporationRegistry();
+        (function() {
+            let saved = 'dark';
+            try { saved = localStorage.getItem('monolith-theme') || 'dark'; } catch (e) {}
+            document.documentElement.setAttribute('data-theme', saved);
+            updateThemeIcon(saved);
+            renderCorporationRegistry();
+        })();
     </script>
 </body>
 </html>
