@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
+
+    <title>Monolith Labs | Research & Infrastructure</title>
+    <meta name="title" content="Monolith Labs | Research & Infrastructure">
+    <meta name="description" content="Monolith Labs is a research institute dedicated to open-access science, enterprise AI observatories, and data-driven public utility infrastructure.">
+    <meta name="keywords" content="Monolith Labs, AI First Corporations Observatory, Research Methodology, Enterprise AI Transformation, Sovereign Compute">
+    <meta name="author" content="Monolith Labs">
+
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/jq8MDZg6/Monolith-Labs.png">
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/jq8MDZg6/Monolith-Labs.png">
+
+    <link rel="canonical" href="https://monolithlabz.github.io/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://monolithlabz.github.io/">
+    <meta property="og:title" content="Monolith Labs | Research & Infrastructure">
+    <meta property="og:description" content="An open research repository and continuous builder of enterprise AI observatories, public utility tools, and research frameworks.">
+    <meta property="og:image" content="https://i.postimg.cc/V6WG62gZ/ML-COVER.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://monolithlabz.github.io/">
+    <meta property="twitter:title" content="Monolith Labs | Research & Infrastructure">
+    <meta property="twitter:description" content="An open research repository and continuous builder of enterprise AI observatories, public utility tools, and research frameworks.">
+    <meta property="twitter:image" content="https://i.postimg.cc/V6WG62gZ/ML-COVER.png">
+
+    <!-- Structured Data: establishes Monolith Labs as a distinct entity -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Monolith Labs",
+        "url": "https://monolithlabz.github.io/",
+        "logo": "https://i.postimg.cc/jq8MDZg6/Monolith-Labs.png",
+        "description": "Monolith Labs is a research institute dedicated to open-access science, enterprise AI observatories, and data-driven public utility tools.",
+        "founder": {
+            "@type": "Person",
+            "name": "Sadman Samin"
+        },
+        "sameAs": [
+            "https://linkedin.com/company/monolithlabz"
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root, [data-theme="dark"] {
+            --bg: #0a0b0d;
+            --bg-elevated: #131519;
+            --text-primary: #f0f2f5;
+            --text-secondary: #8c939e;
+            --text-tertiary: #525a66;
+            --border: rgba(255, 255, 255, 0.09);
+            --border-strong: rgba(255, 255, 255, 0.35);
+            --card-bg: #0e1013;
+            --accent-muted: #2a2e35;
+            --card-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.6);
+            --nav-bg: rgba(10, 11, 13, 0.88);
+            --mono-font: 'JetBrains Mono', monospace;
+            --sans-font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        [data-theme="light"] {
+            --bg: #f6f7f9;
+            --bg-elevated: #ffffff;
+            --text-primary: #0e1013;
+            --text-secondary: #5a6270;
+            --text-tertiary: #8c939e;
+            --border: rgba(14, 16, 19, 0.1);
+            --border-strong: rgba(14, 16, 19, 0.4);
+            --card-bg: #ffffff;
+            --accent-muted: #e2e5eb;
+            --card-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.08);
+            --nav-bg: rgba(246, 247, 249, 0.88);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--sans-font);
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.5;
+            letter-spacing: -0.015em;
+            -webkit-font-smoothing: antialiased;
+            transition: background-color 0.25s ease, color 0.25s ease;
+            overflow-x: hidden;
+        }
+
+        .bg-grid-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+            background-image: 
+                linear-gradient(to right, var(--border) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+            background-size: 60px 60px;
+            opacity: 0.35;
+        }
+
+        .mono {
+            font-family: var(--mono-font);
+            font-size: 0.7rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.15s ease, border-color 0.15s ease;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Nav Header */
+        header.nav-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background-color: var(--nav-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            transition: background-color 0.25s ease, border-color 0.25s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 3.75rem;
+        }
+
+        .nav-logo {
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            font-family: var(--mono-font);
+        }
+
+        .nav-logo .reticle {
+            width: 12px;
+            height: 12px;
+            position: relative;
+            flex-shrink: 0;
+        }
+        .nav-logo .reticle::before,
+        .nav-logo .reticle::after {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border: 1px solid var(--text-primary);
+        }
+        .nav-logo .reticle::before { top: 0; left: 0; border-width: 1px 0 0 1px; }
+        .nav-logo .reticle::after { bottom: 0; right: 0; border-width: 0 1px 1px 0; }
+
+        .nav-center-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-center-links a {
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            font-family: var(--mono-font);
+        }
+
+        .nav-center-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        /* Icon Theme Toggle */
+        .theme-toggle-btn {
+            background-color: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            width: 36px;
+            height: 36px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .theme-toggle-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: currentColor;
+        }
+
+        .theme-toggle-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--border-strong);
+            background-color: var(--bg-elevated);
+        }
+
+        .btn-pill-primary {
+            background-color: var(--text-primary);
+            color: var(--bg);
+            border: 1px solid var(--text-primary);
+            padding: 0.6rem 1.25rem;
+            border-radius: 4px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            font-family: var(--mono-font);
+        }
+
+        .btn-pill-primary:hover {
+            background-color: var(--text-secondary);
+            border-color: var(--text-secondary);
+            color: var(--bg);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding-top: 11.5rem;
+            padding-bottom: 5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-viewport-corners {
+            position: absolute;
+            top: 8rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 900px;
+            height: calc(100% - 4rem);
+            pointer-events: none;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+        }
+
+        .hero-viewport-corners::before,
+        .hero-viewport-corners::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border: 1px solid var(--text-primary);
+        }
+        .hero-viewport-corners::before { top: -1px; left: -1px; border-width: 1px 0 0 1px; }
+        .hero-viewport-corners::after { bottom: -1px; right: -1px; border-width: 0 1px 1px 0; }
+
+        .hero-eyebrow {
+            color: var(--text-tertiary);
+            margin-bottom: 1.25rem;
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border: 1px solid var(--border);
+            background: var(--bg-elevated);
+            border-radius: 2px;
+        }
+
+        .hero-section h1 {
+            font-size: 3.25rem;
+            font-weight: 500;
+            letter-spacing: -0.035em;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            max-width: 760px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-section h1 em {
+            font-style: normal;
+            color: var(--text-tertiary);
+            font-weight: 300;
+        }
+
+        .hero-desc {
+            font-size: 1.05rem;
+            font-weight: 300;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2.25rem auto;
+            line-height: 1.65;
+        }
+
+        .hero-ctas {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 4rem;
+        }
+
+        .methodology-container {
+            max-width: 580px;
+            margin: 0 auto;
+            padding: 1.25rem;
+            border: 1px solid var(--border);
+            background-color: var(--card-bg);
+            text-align: left;
+            border-radius: 4px;
+        }
+
+        .note-desc {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .inline-link {
+            color: var(--text-primary);
+            font-weight: 500;
+            border-bottom: 1px solid var(--border-strong);
+            padding-bottom: 1px;
+            font-family: var(--mono-font);
+            font-size: 0.78rem;
+        }
+
+        .inline-link:hover {
+            border-bottom-color: var(--text-primary);
+            background-color: var(--accent-muted);
+        }
+
+        /* Stats Banner */
+        .stats-banner {
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+            background-color: var(--card-bg);
+            display: flex;
+            border-radius: 4px;
+        }
+
+        .banner-stat-item {
+            flex: 1;
+            text-align: left;
+            padding: 2rem 2.5rem;
+            position: relative;
+        }
+
+        .banner-stat-item + .banner-stat-item {
+            border-left: 1px solid var(--border);
+        }
+
+        .banner-stat-item h3 {
+            font-size: 2.75rem;
+            font-weight: 500;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            font-family: var(--mono-font);
+            color: var(--text-primary);
+        }
+
+        .banner-stat-item p {
+            color: var(--text-tertiary);
+            font-size: 0.72rem;
+            letter-spacing: 0.04em;
+            font-family: var(--mono-font);
+        }
+
+        /* Products Section Grid */
+        .products-section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 0.7rem;
+            color: var(--text-tertiary);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-family: var(--mono-font);
+            letter-spacing: 0.08em;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: var(--border);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+        }
+
+        /* Tactile Card Hover Effect */
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2.25rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            position: relative;
+            min-height: 250px;
+            cursor: pointer;
+            transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+                        border-color 0.2s ease,
+                        box-shadow 0.2s ease,
+                        background-color 0.2s ease;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--text-primary);
+            opacity: 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+        }
+
+        .product-card:hover {
+            background-color: var(--bg-elevated);
+            border-color: var(--border-strong);
+            transform: translateY(-4px);
+            box-shadow: var(--card-shadow);
+        }
+
+        .product-card:hover::before {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .product-title {
+            font-size: 1.15rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: var(--text-primary);
+            transition: color 0.15s ease;
+        }
+
+        .product-type {
+            font-size: 0.65rem;
+            color: var(--text-tertiary);
+            border: 1px solid var(--border);
+            padding: 0.2rem 0.5rem;
+            border-radius: 2px;
+            white-space: nowrap;
+            font-family: var(--mono-font);
+            background: var(--bg);
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .product-card:hover .product-type {
+            border-color: var(--border-strong);
+            color: var(--text-primary);
+        }
+
+        .product-desc {
+            color: var(--text-secondary);
+            font-size: 0.86rem;
+            font-weight: 300;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .product-link {
+            font-size: 0.75rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            color: var(--text-secondary);
+            font-family: var(--mono-font);
+            transition: color 0.2s ease;
+        }
+
+        .product-link .arrow {
+            display: inline-block;
+            transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .product-card:hover .product-link {
+            color: var(--text-primary);
+        }
+
+        .product-card:hover .product-link .arrow {
+            transform: translate(3px, -3px);
+        }
+
+        /* Subtle Leadership Box */
+        .team-section {
+            padding: 3rem 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .team-subtle-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.6rem 1rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        /* Footer */
+        .footer-simple {
+            margin-top: 4rem;
+            padding: 4rem 0 3rem 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-grid-flat {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand-flat h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-family: var(--mono-font);
+            letter-spacing: 0.04em;
+        }
+
+        .footer-brand-flat p {
+            color: var(--text-tertiary);
+            font-size: 0.82rem;
+            max-width: 320px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .footer-links-flat {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .footer-links-flat a {
+            color: var(--text-secondary);
+            font-size: 0.78rem;
+            font-family: var(--mono-font);
+        }
+
+        .footer-links-flat a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-bottom-flat {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-tertiary);
+            font-size: 0.75rem;
+            font-family: var(--mono-font);
+        }
+
+        .footer-social {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--text-tertiary);
+        }
+
+        .footer-social a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-social svg {
+            width: 13px;
+            height: 13px;
+            fill: currentColor;
+        }
+
+        @media (max-width: 768px) {
+            nav .nav-center-links { display: none; }
+            nav { height: 3.5rem; }
+            .hero-section { padding-top: 6.5rem; padding-bottom: 3.5rem; }
+            .hero-section h1 { font-size: 2.1rem; letter-spacing: -0.03em; margin-bottom: 1rem; }
+            .hero-desc { font-size: 0.95rem; padding: 0 0.5rem; }
+            .stats-banner { flex-direction: column; }
+            .banner-stat-item { padding: 1.25rem; }
+            .banner-stat-item + .banner-stat-item { border-left: none; border-top: 1px solid var(--border); }
+            .banner-stat-item h3 { font-size: 2.25rem; }
+            .products-section, .team-section { padding: 3.5rem 0; }
+            .products-grid { grid-template-columns: 1fr; }
+            .product-card { padding: 1.5rem; min-height: auto; }
+            .products-grid > .product-card[style*="grid-column"] { grid-column: span 1 !important; }
+            .footer-grid-flat { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-links-flat { grid-template-columns: 1fr; }
+            .footer-bottom-flat { flex-direction: column; gap: 1rem; text-align: center; }
+            .hero-viewport-corners { top: 5rem; height: calc(100% - 2rem); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-grid-pattern"></div>
+
+    <header class="nav-header">
+        <div class="container">
+            <nav>
+                <a href="https://monolithlabz.github.io/" class="nav-logo"><span class="reticle"></span>MONOLITH LABS.</a>
+
+                <div class="nav-center-links">
+                    <a href="#initiatives">Initiatives</a>
+                    <a href="#team">Leadership</a>
+                    <a href="https://monolithlabz.github.io/methodology.html">Methodology</a>
+                </div>
+                <div class="nav-right">
+                    <button class="theme-toggle-btn" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle Theme">
+                        <svg id="themeIcon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Rendered via JS -->
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero-section">
+            <div class="hero-viewport-corners"></div>
+            <p class="hero-eyebrow mono">Independent research institute</p>
+            <h1>Building the next public <em>infrastructure</em>.</h1>
+            <p class="hero-desc">
+                An independent research institute engineering open-access public data utilities, socio-economic intelligence models, and climate-resilient frameworks. Completely accessible, fully verified, and free.
+            </p>
+            <div class="hero-ctas">
+                <a href="#initiatives" class="btn-pill-primary">Explore Products</a>
+            </div>
+
+            <div class="methodology-container">
+                <p class="note-desc">
+                    To understand our data pipelines, synthesis rubrics, and automated validation layers, read the complete
+                    <a href="https://monolithlabz.github.io/methodology.html" class="inline-link">Research Methodology &amp; Data Framework &#8599;</a>.
+                </p>
+            </div>
+        </section>
+
+        <section class="stats-banner">
+            <div class="banner-stat-item">
+                <h3>1</h3>
+                <p class="mono">Digital Utilities Engineered</p>
+            </div>
+            <div class="banner-stat-item">
+                <h3>0</h3>
+                <p class="mono">Paywalls or Gatekeeping Barriers</p>
+            </div>
+            <div class="banner-stat-item">
+                <h3>Global</h3>
+                <p class="mono">Research &amp; Utility Scope</p>
+            </div>
+        </section>
+
+        <main class="products-section" id="initiatives">
+            <div class="section-title mono">Selected Products &amp; Initiatives</div>
+
+            <div class="products-grid">
+
+                <a href="https://monolithlabz.github.io/ai-first-corporation.html" class="product-card" style="grid-column: span 2;" target="_blank" rel="noopener noreferrer">
+                    <div class="card-header">
+                        <h3 class="product-title">AI First Corporations Observatory</h3>
+                        <span class="product-type mono">Flagship Research</span>
+                    </div>
+                    <p class="product-desc">
+                        An empirical research repository cataloging the structural transition from Cloud-First to AI-First enterprise architectures. Tracks the global top 50 corporations across custom silicon ASICs, sovereign compute cluster deployments, foundation model ecosystems, and workflow transformations.
+                    </p>
+                    <div class="product-link">Open Observatory <span class="arrow">&#8599;</span></div>
+                </a>
+
+            </div>
+        </main>
+
+        <section class="team-section" id="team">
+            <div class="section-title mono">Leadership</div>
+            <div class="team-subtle-box">
+                <span style="color: var(--text-primary); font-weight: 500;">Sadman Samin</span>
+                <span class="mono" style="color: var(--text-tertiary); font-size: 0.65rem;">Founder</span>
+            </div>
+        </section>
+
+        <footer class="footer-simple">
+            <div class="footer-grid-flat">
+                <div class="footer-brand-flat">
+                    <h4>MONOLITH LABS.</h4>
+                    <p>An independent research institute engineering open-access data utilities and global socio-economic intelligence models.</p>
+                </div>
+                <div class="footer-links-flat">
+                    <a href="https://monolithlabz.github.io/ai-first-corporation.html" target="_blank" rel="noopener noreferrer">AI First Corporations Observatory &#8599;</a>
+                    <a href="https://monolithlabz.github.io/methodology.html">Research Methodology &amp; Data Framework &#8599;</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom-flat">
+                <div class="mono">&copy; 2026 Monolith Labs.</div>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/company/monolithlabz" target="_blank" rel="noopener noreferrer" class="mono">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.446-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.114 20.452H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        LinkedIn &#8599;
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Theme Icon SVG Renderer
+        function updateThemeIcon(theme) {
+            const icon = document.getElementById('themeIcon');
+            if (!icon) return;
+            if (theme === 'light') {
+                // Moon icon when in light mode
+                icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+            } else {
+                // Sun icon when in dark mode
+                icon.innerHTML = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+            }
+        }
+
+        // Toggle Theme Function
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme') || 'dark';
+            const next = current === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', next);
+            try { localStorage.setItem('monolith-theme', next); } catch (e) {}
+            updateThemeIcon(next);
+        }
+
+        // Initialize Theme State on Load
+        (function() {
+            let saved = 'dark';
+            try { saved = localStorage.getItem('monolith-theme') || 'dark'; } catch (e) {}
+            document.documentElement.setAttribute('data-theme', saved);
+            updateThemeIcon(saved);
+        })();
+    </script>
+</body>
+</html>
