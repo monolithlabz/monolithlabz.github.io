@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
+
+    <title>Research Methodology & Data Framework — Monolith Labs</title>
+    <meta name="title" content="Research Methodology & Data Framework — Monolith Labs">
+    <meta name="description" content="Central research methodology, data aggregation pipelines, AI synthesis rubrics, and validation logic powering all Monolith Labs observatories and public utilities.">
+    <meta name="keywords" content="Monolith Labs, Research Methodology, Data Framework, AI Synthesis Logic, Sovereign Compute Metrics, Enterprise AI Observatory">
+    <meta name="author" content="Monolith Labs">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/jq8MDZg6/Monolith-Labs.png">
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/jq8MDZg6/Monolith-Labs.png">
+
+    <link rel="canonical" href="https://monolithlabz.github.io/methodology.html" />
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://monolithlabz.github.io/methodology.html">
+    <meta property="og:title" content="Research Methodology & Data Framework — Monolith Labs">
+    <meta property="og:description" content="Central research methodology, data aggregation pipelines, AI synthesis rubrics, and validation logic powering all Monolith Labs projects.">
+    <meta property="og:image" content="https://i.postimg.cc/V6WG62gZ/ML-COVER.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://monolithlabz.github.io/methodology.html">
+    <meta property="twitter:title" content="Research Methodology & Data Framework — Monolith Labs">
+    <meta property="twitter:description" content="Central research methodology, data aggregation pipelines, AI synthesis rubrics, and validation logic powering all Monolith Labs projects.">
+    <meta property="twitter:image" content="https://i.postimg.cc/V6WG62gZ/ML-COVER.png">
+
+    <!-- Structured Data: Monolith Labs Methodology Document -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Research Methodology & Data Framework",
+        "description": "Central research methodology, data aggregation framework, and AI synthesis logic powering all analytical observatories and public utility tools built by Monolith Labs.",
+        "author": {
+            "@type": "Organization",
+            "name": "Monolith Labs",
+            "url": "https://monolithlabz.github.io/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Monolith Labs",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://i.postimg.cc/jq8MDZg6/Monolith-Labs.png"
+            }
+        },
+        "mainEntityOfPage": "https://monolithlabz.github.io/methodology.html"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root, [data-theme="dark"] {
+            --bg: #0a0b0d;
+            --bg-elevated: #131519;
+            --text-primary: #f0f2f5;
+            --text-secondary: #8c939e;
+            --text-tertiary: #525a66;
+            --border: rgba(255, 255, 255, 0.09);
+            --border-strong: rgba(255, 255, 255, 0.35);
+            --card-bg: #0e1013;
+            --accent-muted: #2a2e35;
+            --card-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.6);
+            --nav-bg: rgba(10, 11, 13, 0.88);
+            --mono-font: 'JetBrains Mono', monospace;
+            --sans-font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        [data-theme="light"] {
+            --bg: #f6f7f9;
+            --bg-elevated: #ffffff;
+            --text-primary: #0e1013;
+            --text-secondary: #5a6270;
+            --text-tertiary: #8c939e;
+            --border: rgba(14, 16, 19, 0.1);
+            --border-strong: rgba(14, 16, 19, 0.4);
+            --card-bg: #ffffff;
+            --accent-muted: #e2e5eb;
+            --card-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.08);
+            --nav-bg: rgba(246, 247, 249, 0.88);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--sans-font);
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            letter-spacing: -0.015em;
+            -webkit-font-smoothing: antialiased;
+            transition: background-color 0.25s ease, color 0.25s ease;
+            overflow-x: hidden;
+        }
+
+        .bg-grid-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+            background-image: 
+                linear-gradient(to right, var(--border) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+            background-size: 60px 60px;
+            opacity: 0.35;
+        }
+
+        .mono {
+            font-family: var(--mono-font);
+            font-size: 0.72rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.15s ease, border-color 0.15s ease;
+        }
+
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Nav Header */
+        header.nav-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background-color: var(--nav-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            transition: background-color 0.25s ease, border-color 0.25s ease;
+        }
+
+        nav {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 3.75rem;
+        }
+
+        .nav-logo {
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            font-family: var(--mono-font);
+        }
+
+        .nav-logo .reticle {
+            width: 12px;
+            height: 12px;
+            position: relative;
+            flex-shrink: 0;
+        }
+        .nav-logo .reticle::before,
+        .nav-logo .reticle::after {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border: 1px solid var(--text-primary);
+        }
+        .nav-logo .reticle::before { top: 0; left: 0; border-width: 1px 0 0 1px; }
+        .nav-logo .reticle::after { bottom: 0; right: 0; border-width: 0 1px 1px 0; }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle-btn {
+            background-color: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            width: 36px;
+            height: 36px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .theme-toggle-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: currentColor;
+        }
+
+        .theme-toggle-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--border-strong);
+            background-color: var(--bg-elevated);
+        }
+
+        .btn-pill-secondary {
+            background-color: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            padding: 0.45rem 0.85rem;
+            border-radius: 4px;
+            font-size: 0.68rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            font-family: var(--mono-font);
+        }
+
+        .btn-pill-secondary:hover {
+            color: var(--text-primary);
+            border-color: var(--border-strong);
+            background-color: var(--bg-elevated);
+        }
+
+        /* Article Layout */
+        .article-header {
+            padding-top: 10rem;
+            padding-bottom: 3.5rem;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 3.5rem;
+        }
+
+        .post-meta {
+            color: var(--text-tertiary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .article-header h1 {
+            font-size: 2.85rem;
+            font-weight: 600;
+            letter-spacing: -0.035em;
+            line-height: 1.12;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .author-line {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.75rem;
+        }
+
+        .author-line span {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .lead-text {
+            font-size: 1.15rem;
+            font-weight: 300;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* TOC Container */
+        .toc-card {
+            border: 1px solid var(--border);
+            background-color: var(--card-bg);
+            padding: 1.75rem 2rem;
+            border-radius: 4px;
+            margin-bottom: 4.5rem;
+        }
+
+        .toc-title {
+            color: var(--text-tertiary);
+            margin-bottom: 1.25rem;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .toc-list li {
+            display: flex;
+            align-items: baseline;
+            gap: 0.85rem;
+        }
+
+        .toc-num {
+            color: var(--text-tertiary);
+            min-width: 24px;
+        }
+
+        .toc-list a {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            transition: color 0.15s ease;
+        }
+
+        .toc-list a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Section Block Styling */
+        .method-section {
+            scroll-margin-top: 100px;
+            margin-bottom: 4.5rem;
+        }
+
+        .tool-stripe {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+            margin-bottom: 1.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .tool-stripe h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+        }
+
+        .tool-badges {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            font-family: var(--mono-font);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            border: 1px solid var(--border);
+            padding: 0.25rem 0.6rem;
+            color: var(--text-secondary);
+            background: var(--bg-elevated);
+            border-radius: 2px;
+            white-space: nowrap;
+        }
+
+        .method-content p {
+            font-size: 1.02rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        .method-content h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem 0;
+            letter-spacing: -0.01em;
+            color: var(--text-primary);
+        }
+
+        .source-block {
+            border-left: 2px solid var(--text-primary);
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+            background-color: var(--card-bg);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .source-label {
+            color: var(--text-tertiary);
+            margin-bottom: 0.5rem;
+        }
+
+        .source-block p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+
+        /* Dimension & Source List */
+        .dim-list {
+            list-style: none;
+            margin: 1.75rem 0;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            background-color: var(--card-bg);
+        }
+
+        .dim-item {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+        }
+
+        .dim-item:last-child {
+            border-bottom: none;
+        }
+
+        .dim-num {
+            color: var(--text-tertiary);
+            padding-top: 0.15rem;
+            min-width: 24px;
+        }
+
+        .dim-body strong {
+            display: block;
+            font-size: 0.95rem;
+            margin-bottom: 0.35rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .dim-body span {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* Metric Grid Table */
+        .metric-grid {
+            display: flex;
+            flex-direction: column;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            background-color: var(--card-bg);
+            overflow: hidden;
+        }
+
+        .metric-row {
+            display: grid;
+            grid-template-columns: 210px 150px 1fr;
+            border-bottom: 1px solid var(--border);
+            transition: background 0.15s ease;
+        }
+
+        .metric-row:last-child {
+            border-bottom: none;
+        }
+
+        .metric-row:hover {
+            background-color: var(--bg-elevated);
+        }
+
+        .metric-name {
+            padding: 1.1rem 1.25rem;
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            border-right: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+        }
+
+        .metric-weight {
+            padding: 1.1rem 1.25rem;
+            font-size: 0.78rem;
+            color: var(--text-primary);
+            font-weight: 600;
+            border-right: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+        }
+
+        .metric-desc {
+            padding: 1.1rem 1.25rem;
+            font-size: 0.86rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.55;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Disclaimer Box */
+        .disclaimer-box {
+            border: 1px solid var(--border);
+            background-color: var(--bg-elevated);
+            padding: 2rem;
+            border-radius: 4px;
+            margin: 3rem 0;
+        }
+
+        .disclaimer-title {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .disclaimer-box p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .disclaimer-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 4.5rem 0;
+        }
+
+        /* Footer */
+        footer.footer-simple {
+            padding: 4rem 0 3rem 0;
+            border-top: 1px solid var(--border);
+            margin-top: 6rem;
+        }
+
+        .footer-grid-flat {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .footer-brand-flat h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-family: var(--mono-font);
+            letter-spacing: 0.04em;
+        }
+
+        .footer-brand-flat p {
+            color: var(--text-tertiary);
+            font-size: 0.82rem;
+            max-width: 340px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .footer-links-flat {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .footer-links-flat a {
+            color: var(--text-secondary);
+            font-size: 0.78rem;
+            font-family: var(--mono-font);
+        }
+
+        .footer-links-flat a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-bottom-flat {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-tertiary);
+            font-size: 0.75rem;
+        }
+
+        @media (max-width: 768px) {
+            .article-header { padding-top: 7.5rem; padding-bottom: 2.5rem; }
+            .article-header h1 { font-size: 2.1rem; }
+            .metric-row { grid-template-columns: 1fr; }
+            .metric-weight, .metric-name { border-right: none; border-bottom: 1px solid var(--border); }
+            .footer-grid-flat { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom-flat { flex-direction: column; gap: 1rem; text-align: center; }
+            .tool-stripe { flex-direction: column; align-items: flex-start; }
+            .toc-card { padding: 1.25rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-grid-pattern"></div>
+
+    <header class="nav-header">
+        <nav>
+            <a href="https://monolithlabz.github.io/" class="nav-logo"><span class="reticle"></span>MONOLITH LABS.</a>
+
+            <div class="nav-right">
+                <a href="https://monolithlabz.github.io/" class="btn-pill-secondary mono">&larr; Home</a>
+                <button class="theme-toggle-btn" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle Theme">
+                    <svg id="themeIcon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <!-- Rendered via JS -->
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <header class="article-header">
+            <div class="post-meta mono">
+                <span>Updated July 2026</span>
+                <span>·</span>
+                <span>Institutional Standard</span>
+            </div>
+            <h1>Research Methodology &amp; Data Framework</h1>
+            <div class="author-line">
+                Published by <span>Monolith Labs</span> &nbsp;·&nbsp; Independent Technical Research Institute
+            </div>
+            <p class="lead-text">
+                This document details the central research architecture, data synthesis logic, and verification pipelines powering all analytical observatories, public utilities, and technical indices published across Monolith Labs platforms.
+            </p>
+        </header>
+
+        <!-- Table of Contents -->
+        <div class="toc-card">
+            <div class="toc-title mono">Table of Contents</div>
+            <ul class="toc-list">
+                <li><span class="toc-num mono">01</span><a href="#philosophy">Research Philosophy &amp; High-Fidelity Heuristics</a></li>
+                <li><span class="toc-num mono">02</span><a href="#aggregation">Multi-Channel Data Aggregation &amp; Sourcing</a></li>
+                <li><span class="toc-num mono">03</span><a href="#synthesis">AI Synthesis, Entity Resolution &amp; Normalization</a></li>
+                <li><span class="toc-num mono">04</span><a href="#scoring">Scoring Logic, Metric Weighting &amp; Categorization</a></li>
+                <li><span class="toc-num mono">05</span><a href="#validation">Quality Control &amp; Human-in-the-Loop Verification</a></li>
+                <li><span class="toc-num mono">06</span><a href="#limitations">Model Constraints, Drift &amp; Responsible Usage</a></li>
+            </ul>
+        </div>
+
+        <main class="method-content">
+
+            <!-- 01: Philosophy -->
+            <section id="philosophy" class="method-section">
+                <div class="tool-stripe">
+                    <h2>01. Research Philosophy &amp; High-Fidelity Heuristics</h2>
+                    <div class="tool-badges">
+                        <span class="badge">Hybrid Architecture</span>
+                        <span class="badge">Scale + Precision</span>
+                    </div>
+                </div>
+
+                <p>Monolith Labs operates on a hybrid research methodology combining computational scale with rigorous engineering and domain oversight. By deploying modern machine learning workflows alongside human editorial validation, we map global tech ecosystems, enterprise compute footprints, sovereign policy matrices, and socio-economic shifts at a scale that manual research alone cannot accomplish.</p>
+
+                <p>Our core thesis is that publicly verifiable data—when properly aggregated, normalized, and stripped of promotional noise—yields highly accurate directional signals. Our observatories and public utilities are engineered to extract these signals and present them through transparent, open-access frameworks.</p>
+
+                <div class="source-block">
+                    <div class="source-label mono">Core Mission &amp; Scope</div>
+                    <p>Monolith Labs does not produce speculative commentary or paywalled proprietary reports. Our objective is to democratize high-level data intelligence, providing open-access heuristics, macro-level indices, and baseline technical metrics for researchers, policy makers, and enterprise leaders worldwide.</p>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <!-- 02: Aggregation -->
+            <section id="aggregation" class="method-section">
+                <div class="tool-stripe">
+                    <h2>02. Multi-Channel Data Aggregation &amp; Sourcing</h2>
+                    <div class="tool-badges">
+                        <span class="badge">Public Data</span>
+                        <span class="badge">Cross-Referencing</span>
+                    </div>
+                </div>
+
+                <p>The integrity of any analytical model depends directly on the quality, lineage, and diversity of its underlying inputs. For every project, Monolith Labs establishes a multi-channel sourcing matrix that prioritizes observable market and technical artifacts over unverified self-reporting.</p>
+
+                <h3>Primary Data Channels</h3>
+                <ul class="dim-list">
+                    <li class="dim-item">
+                        <span class="dim-num mono">C1</span>
+                        <div class="dim-body">
+                            <strong>Regulatory &amp; Enterprise Filings</strong>
+                            <span>For corporate and macroeconomic models, data is cross-referenced against public regulatory disclosures (SEC 10-K/10-Q filings, statutory reports), audited financial documentation, investor presentations, and verified corporate announcements.</span>
+                        </div>
+                    </li>
+                    <li class="dim-item">
+                        <span class="dim-num mono">C2</span>
+                        <div class="dim-body">
+                            <strong>Technical Registries &amp; Infrastructure Assets</strong>
+                            <span>For compute, silicon, and hardware indexing, we aggregate data directly from semiconductor foundry node disclosures, custom ASIC specification sheets, public cloud hardware deployment documentation, and supercomputing center registries.</span>
+                        </div>
+                    </li>
+                    <li class="dim-item">
+                        <span class="dim-num mono">C3</span>
+                        <div class="dim-body">
+                            <strong>Academic Research &amp; Benchmark Literature</strong>
+                            <span>We continuously monitor open-access scholarly repositories (arXiv, IEEE, ACM) to validate model architectures, scaling laws, evaluation benchmarks, and algorithmic performance metrics against peer-reviewed technical literature.</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <hr class="section-divider">
+
+            <!-- 03: Synthesis -->
+            <section id="synthesis" class="method-section">
+                <div class="tool-stripe">
+                    <h2>03. AI Synthesis, Entity Resolution &amp; Normalization</h2>
+                    <div class="tool-badges">
+                        <span class="badge">LLM Deployment</span>
+                        <span class="badge">Entity Resolution</span>
+                    </div>
+                </div>
+
+                <p>Raw aggregated datasets across international domains are inherently fragmented and inconsistent. We utilize Large Language Models (LLMs) and custom parsing scripts specifically for entity resolution, schema normalization, and structural categorization. The AI does not generate synthetic facts; it parses and structures explicitly supplied source inputs.</p>
+
+                <h3>Processing Pipeline</h3>
+                <p>During data synthesis, automated pipelines normalize disparate terminology across global markets, standardize currency and compute metrics (e.g., converting peak FLOPS, GPU counts, and training cluster allocations into H100/B200 equivalents), and isolate statistical outliers.</p>
+
+                <p>In addition, structured LLM agents parse complex qualitative documents—such as national AI policy roadmaps, enterprise AI deployment guidelines, or curriculum frameworks—according to strict, deterministic rubrics designed by Monolith Labs research engineers.</p>
+            </section>
+
+            <hr class="section-divider">
+
+            <!-- 04: Scoring -->
+            <section id="scoring" class="method-section">
+                <div class="tool-stripe">
+                    <h2>04. Scoring Logic, Metric Weighting &amp; Categorization</h2>
+                    <div class="tool-badges">
+                        <span class="badge">Standardized Indices</span>
+                    </div>
+                </div>
+
+                <p>To ensure comparability across different observatories and utilities, outputs are structured into quantitative baseline scores, standardized categorical tiers, and modifier coefficients.</p>
+
+                <div class="metric-grid">
+                    <div class="metric-row">
+                        <div class="metric-name">Primary Index Metric</div>
+                        <div class="metric-weight mono">Quantitative</div>
+                        <div class="metric-desc">The primary numerical score generated by a model (e.g., AI First Performance Score, Compute Density Index, Risk Percentage). Calculated via weighted synthesis of verified raw metrics.</div>
+                    </div>
+                    <div class="metric-row">
+                        <div class="metric-name">Tier Categorization</div>
+                        <div class="metric-weight mono">Categorical</div>
+                        <div class="metric-desc">Classifies entities into defined tiers (e.g., Tier 1 Hyperscaler, Emerging Contender, Sovereign Leader) to enable fast comparison across distributions.</div>
+                    </div>
+                    <div class="metric-row">
+                        <div class="metric-name">Friction &amp; Risk Modifiers</div>
+                        <div class="metric-weight mono">Modifier</div>
+                        <div class="metric-desc">Accounts for real-world constraints such as export controls, energy grid limits, regulatory bottlenecks, or supply chain dependencies that temper raw theoretical predictions.</div>
+                    </div>
+                    <div class="metric-row">
+                        <div class="metric-name">Trajectory Indicators</div>
+                        <div class="metric-weight mono">Trend Signal</div>
+                        <div class="metric-desc">Forward-looking indicators tracking momentum, infrastructure Capex velocity, or research output growth based on historical trajectories and active investments.</div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <!-- 05: Validation -->
+            <section id="validation" class="method-section">
+                <div class="tool-stripe">
+                    <h2>05. Quality Control &amp; Human-in-the-Loop Verification</h2>
+                    <div class="tool-badges">
+                        <span class="badge">Human-in-the-Loop</span>
+                    </div>
+                </div>
+
+                <p>No dataset or observatory page is published purely through automated pipeline outputs. Monolith Labs enforces a strict "human-in-the-loop" verification protocol. Before dataset publication, random sampling and deterministic sanity checks are executed to verify synthesized values against underlying primary sources.</p>
+
+                <p>We actively test for hallucinated data points, outdated metrics, or localized nuances that automated scrapers might misinterpret (such as regional regulatory definitions or custom chip co-design arrangements). Discrepancies trigger an immediate review of parsing prompts and schema definitions before data re-generation.</p>
+            </section>
+
+            <hr class="section-divider">
+
+            <!-- 06: Limitations -->
+            <section id="limitations" class="method-section">
+                <div class="tool-stripe">
+                    <h2>06. Model Constraints, Drift &amp; Responsible Usage</h2>
+                    <div class="tool-badges">
+                        <span class="badge">Open Disclosure</span>
+                    </div>
+                </div>
+
+                <p>Transparency regarding model limitations is vital for responsible data usage. All indices and utilities published by Monolith Labs share fundamental constraints inherent to macro-level data modeling.</p>
+
+                <div class="disclaimer-box">
+                    <div class="disclaimer-title mono">Universal Model Limitations</div>
+                    <p><strong>Point-in-Time Snapshots:</strong> Technology specs, corporate Capex allocations, and national strategies evolve rapidly. Our observatories represent point-in-time snapshots based on available data during the designated research window.</p>
+                    <p><strong>Heuristics for Macro Pattern Recognition:</strong> Scores, performance indices, and cluster metrics are directional heuristics designed to evaluate global trends. They do not account for hyper-specific confidential variables (such as undisclosed non-public hardware contracts or internal corporate restructuring).</p>
+                    <p><strong>Exogenous Shocks:</strong> Models projecting technological or economic trajectories assume sustained operational trends. Macroeconomic disruptions, geopolitical embargoes, or sudden regulatory changes can alter empirical trajectories beyond baseline model assumptions.</p>
+                    <p><strong>Independent Verification:</strong> Data provided across Monolith Labs platforms is designed for analytical reference and macro research. It should be complemented by primary source verification and independent technical evaluation.</p>
+                </div>
+
+                <p>To explore our live research observatories and dataset applications, visit the <a href="https://monolithlabz.github.io/" style="color: var(--text-primary); font-weight: 600; text-decoration: underline;">Monolith Labs Homepage</a>.</p>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer-simple">
+            <div class="footer-grid-flat">
+                <div class="footer-brand-flat">
+                    <h4>MONOLITH LABS.</h4>
+                    <p>An independent technical research institute engineering open-access data utilities and enterprise AI observatories.</p>
+                </div>
+                <div class="footer-links-flat">
+                    <a href="https://monolithlabz.github.io/">Home Platform &#8599;</a>
+                    <a href="https://monolithlabz.github.io/ai-first-corporation.html">AI First Corporations Observatory &#8599;</a>
+                    <a href="https://monolithlabz.github.io/methodology.html">Research Methodology &#8599;</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom-flat">
+                <div class="mono">&copy; 2026 Monolith Labs. All rights reserved.</div>
+                <div class="mono">Open Academic Research Standard</div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // Theme Icon Updater
+        function updateThemeIcon(theme) {
+            const icon = document.getElementById('themeIcon');
+            if (!icon) return;
+            if (theme === 'light') {
+                // Render Moon icon when in light mode (to switch back to dark)
+                icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+            } else {
+                // Render Sun icon when in dark mode (to switch to light)
+                icon.innerHTML = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+            }
+        }
+
+        // Toggle Theme Function
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme') || 'dark';
+            const next = current === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', next);
+            try { localStorage.setItem('monolith-theme', next); } catch (e) {}
+            updateThemeIcon(next);
+        }
+
+        // Initialize Theme State on DOM Load
+        (function() {
+            let savedTheme = 'dark';
+            try { savedTheme = localStorage.getItem('monolith-theme') || 'dark'; } catch (e) {}
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+        })();
+    </script>
+</body>
+</html>
